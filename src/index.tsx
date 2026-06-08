@@ -421,11 +421,77 @@ function StatusBar({ selected, total }: { selected: WordEntry | null; total: num
 
 // ─── Mask helpers ──────────────────────────────────────────────────────────────
 
-function maskWord(word: string): string {
-  return word
-    .split(" ")
-    .map((part) => part[0] + "_".repeat(Math.max(0, part.length - 1)))
-    .join(" ")
+function fillWord(word: string, fillChars: string, hints: Set<number> = new Set()): string {
+  // Shows first letter of each word as a hint,
+  // plus any extra hint positions (random characters for long words),
+  // then fills remaining blanks with user-typed characters.
+  if (!word) return ""
+  let pos = 0
+  let result = ""
+  for (let i = 0; i < word.length; i++) {
+    const ch = word[i]
+    if (ch === " ") {
+      result += " "
+    } else if (i === 0 || word[i - 1] === " ") {
+      result += ch
+    } else if (hints.has(i)) {
+      result += ch
+    } else {
+      result += pos < fillChars.length ? fillChars[pos++] : "_"
+    }
+  }
+  return result
+}
+
+// ─── Filled Word Display (per-character coloring) ────────────────────────────
+
+function FilledWordDisplay({
+  word,
+  fillChars,
+  hints,
+  showCursor,
+}: {
+  word: string
+  fillChars: string
+  hints: Set<number>
+  showCursor: boolean
+}) {
+  let pos = 0
+  let cursorPlaced = false
+  const children: React.ReactNode[] = []
+  for (let i = 0; i < word.length; i++) {
+    const ch = word.charAt(i)
+    if (ch === " ") {
+      children.push(<text key={i} fg="#4a4545"> </text>)
+    } else if (i === 0 || word.charAt(i - 1) === " " || hints.has(i)) {
+      children.push(
+        <text key={i} fg="#f1eced" attributes={TextAttributes.BOLD}>{ch}</text>
+      )
+    } else if (pos < fillChars.length) {
+      const typed = fillChars.charAt(pos++)
+      const correct = typed.toLowerCase() === ch.toLowerCase()
+      children.push(
+        <text
+          key={i}
+          fg={correct ? "#f1eced" : "#f7768e"}
+          attributes={correct ? TextAttributes.NONE : TextAttributes.DIM}
+        >{typed}</text>
+      )
+    } else {
+      // Blank — next one is highlighted as cursor
+      if (!cursorPlaced && showCursor) {
+        children.push(
+          <text key={i} fg="#7aa2f7" attributes={TextAttributes.BOLD}>_</text>
+        )
+        cursorPlaced = true
+      } else {
+        children.push(
+          <text key={i} fg="#4a4545" attributes={TextAttributes.DIM}>_</text>
+        )
+      }
+    }
+  }
+  return <box style={{ flexDirection: "row" }}>{children}</box>
 }
 
 // ─── Guess Mode ────────────────────────────────────────────────────────────────
@@ -448,13 +514,49 @@ function GuessMode({
   counts: Record<string, number>
 }) {
   const { transparent } = useTheme()
-  const [guess, setGuess] = useState("")
+  const [fillChars, setFillChars] = useState("")
   const [result, setResult] = useState<"idle" | "correct" | "wrong">("idle")
 
+  // Reset when word changes
   useEffect(() => {
-    setGuess("")
+    setFillChars("")
     setResult("idle")
   }, [word])
+
+  // Positions that the user needs to fill (non-first-letter, non-space)
+  const blankPositions = useMemo(() => {
+    if (!word) return []
+    const blanks: number[] = []
+    for (let i = 0; i < word.word.length; i++) {
+      if (word.word[i] === " ") continue
+      if (i === 0 || word.word[i - 1] === " ") continue
+      blanks.push(i)
+    }
+    return blanks
+  }, [word])
+
+  // Extra hint: reveal one random blank if word has 6+ characters
+  const hintPositions = useMemo(() => {
+    const hints = new Set<number>()
+    if (!word || word.word.length < 6 || blankPositions.length === 0) return hints
+    const idx = Math.floor(Math.random() * blankPositions.length)
+    hints.add(blankPositions[idx]!)
+    return hints
+  }, [word, blankPositions])
+
+  const neededFillCount = blankPositions.length - hintPositions.size
+
+  // Auto-check when all blanks are filled (only notify if correct)
+  useEffect(() => {
+    if (!word || result !== "idle") return
+    if (fillChars.length === neededFillCount) {
+      const guessed = fillWord(word.word, fillChars, hintPositions)
+      if (guessed.trim().toLowerCase() === word.word.toLowerCase()) {
+        setResult("correct")
+      }
+      // Wrong → no notification, user sees red chars and fixes them
+    }
+  }, [fillChars, word, result, hintPositions, neededFillCount])
 
   useKeyboard((key) => {
     if (key.ctrl && key.name === "g") {
@@ -486,24 +588,28 @@ function GuessMode({
       return
     }
     if (key.name === "backspace") {
-      setGuess((g) => g.slice(0, -1))
+      setFillChars((f) => f.slice(0, -1))
       setResult("idle")
       return
     }
     if (key.name === "return") {
       if (result === "correct" || result === "wrong") {
-        setGuess("")
+        setFillChars("")
         setResult("idle")
-      } else {
+      } else if (result === "idle") {
+        const guessed = fillWord(word?.word ?? "", fillChars, hintPositions)
         setResult(
-          guess.trim().toLowerCase() === (word?.word ?? "").toLowerCase() ? "correct" : "wrong"
+          guessed.trim().toLowerCase() === (word?.word ?? "").toLowerCase() ? "correct" : "wrong"
         )
       }
       return
     }
     if (key.sequence && key.sequence.length === 1 && !key.ctrl && !key.meta) {
-      setGuess((g) => (g + key.sequence!).slice(0, 50))
-      setResult("idle")
+      if (!word) return
+      if (fillChars.length < neededFillCount) {
+        setFillChars((f) => f + key.sequence!)
+        setResult("idle")
+      }
     }
   })
 
@@ -570,7 +676,7 @@ function GuessMode({
 
           <box style={{ flexDirection: "column", alignItems: "center", marginBottom: 1 }}>
             <text fg="#8a8585" attributes={TextAttributes.BOLD}>Word</text>
-            <text fg="#f1eced" attributes={TextAttributes.BOLD}>{maskWord(word.word)}</text>
+            <FilledWordDisplay word={word.word} fillChars={fillChars} hints={hintPositions} showCursor={result === "idle"} />
           </box>
 
           {word.type && (
@@ -580,29 +686,50 @@ function GuessMode({
             </box>
           )}
 
-          <box style={{
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: 1,
-            marginTop: 1,
-            marginBottom: 1,
-          }}>
-            <text fg="#656363">›</text>
-            <text fg={guess.length > 0 ? "#f1eced" : "#4a4545"}>
-              {guess.length > 0 ? guess : "type the English word ..."}
-            </text>
-          </box>
-
-          {result === "correct" && (
-            <box style={{ flexDirection: "row", justifyContent: "center" }}>
-              <text fg="#9ece6a" attributes={TextAttributes.BOLD}>✓ Correct!</text>
+          {result === "idle" && (
+            <box style={{
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 1,
+              marginTop: 1,
+              marginBottom: 1,
+            }}>
+              <text fg={fillChars.length > 0 ? "#7aa2f7" : "#656363"}>›</text>
+              <text fg="#4a4545">
+                {fillChars.length > 0
+                   ? `${fillChars.length}/${neededFillCount}`
+                  : "type to fill in the blanks"}
+              </text>
             </box>
           )}
-          {result === "wrong" && (
-            <box style={{ flexDirection: "column", alignItems: "center" }}>
-              <text fg="#f7768e" attributes={TextAttributes.BOLD}>✗ Wrong</text>
-              <text fg="#e0af68">→ {word.word}</text>
+
+          {(result === "correct" || result === "wrong") && (
+            <box style={{ flexDirection: "column", alignItems: "center", marginTop: 1 }}>
+              {result === "correct" && (
+                <box style={{ flexDirection: "column", alignItems: "center" }}>
+                  <text fg="#9ece6a" attributes={TextAttributes.BOLD}>✓ Correct!</text>
+                  <text fg="#e0af68">{word.word}</text>
+                </box>
+              )}
+              {result === "wrong" && (
+                <box style={{ flexDirection: "column", alignItems: "center" }}>
+                  <text fg="#f7768e" attributes={TextAttributes.BOLD}>✗ Wrong</text>
+                  <text fg="#e0af68">→ {word.word}</text>
+                </box>
+              )}
+              {word.pronounce && (
+                <box style={{ flexDirection: "row", gap: 1, marginTop: 1 }}>
+                  <text fg="#8a8585">Pronounce:</text>
+                  <text fg="#7aa2f7">{word.pronounce}</text>
+                </box>
+              )}
+              {word.example && (
+                <box style={{ flexDirection: "row", gap: 1, marginTop: 1 }}>
+                  <text fg="#8a8585">Example:</text>
+                  <text fg="#c0caf5">{word.example}</text>
+                </box>
+              )}
             </box>
           )}
 
@@ -623,7 +750,8 @@ function App() {
   const [mode, setMode] = useState<"browse" | "guess">("browse")
   const [query, setQuery] = useState("")
   const [selectedLevel, setSelectedLevel] = useState("")
-  const [selectedIdx, setSelectedIdx] = useState(0)
+  const [levelPositions, setLevelPositions] = useState<Record<string, number>>({})
+  const selectedIdx = levelPositions[selectedLevel] ?? 0
   const [viewedWord, setViewedWord] = useState<WordEntry | null>(null)
 
   const words = useMemo(() => {
@@ -672,23 +800,23 @@ function App() {
 
     if (key.name === "backspace") {
       setQuery((q) => q.slice(0, -1))
-      setSelectedIdx(0)
+      setLevelPositions((p) => ({ ...p, [selectedLevel]: 0 }))
       return
     }
 
     if (key.name === "escape") {
       setQuery("")
-      setSelectedIdx(0)
+      setLevelPositions((p) => ({ ...p, [selectedLevel]: 0 }))
       return
     }
 
     if (key.name === "up") {
-      setSelectedIdx((i) => Math.max(0, i - 1))
+      setLevelPositions((p) => ({ ...p, [selectedLevel]: Math.max(0, (p[selectedLevel] ?? 0) - 1) }))
       return
     }
 
     if (key.name === "down") {
-      setSelectedIdx((i) => Math.min(words.length - 1, i + 1))
+      setLevelPositions((p) => ({ ...p, [selectedLevel]: Math.min(words.length - 1, (p[selectedLevel] ?? 0) + 1) }))
       return
     }
 
@@ -696,7 +824,6 @@ function App() {
       const idx = LEVELS.findIndex((l) => l.key === selectedLevel)
       const prev = idx > 0 ? idx - 1 : LEVELS.length - 1
       setSelectedLevel(LEVELS[prev]?.key ?? "")
-      setSelectedIdx(0)
       return
     }
 
@@ -704,7 +831,6 @@ function App() {
       const idx = LEVELS.findIndex((l) => l.key === selectedLevel)
       const next = idx < LEVELS.length - 1 ? idx + 1 : 0
       setSelectedLevel(LEVELS[next]?.key ?? "")
-      setSelectedIdx(0)
       return
     }
 
@@ -712,7 +838,6 @@ function App() {
       const idx = LEVELS.findIndex((l) => l.key === selectedLevel)
       const next = idx < LEVELS.length - 1 ? idx + 1 : 0
       setSelectedLevel(LEVELS[next]?.key ?? "")
-      setSelectedIdx(0)
       return
     }
 
@@ -720,7 +845,6 @@ function App() {
       const idx = LEVELS.findIndex((l) => l.key === selectedLevel)
       const prev = idx > 0 ? idx - 1 : LEVELS.length - 1
       setSelectedLevel(LEVELS[prev]?.key ?? "")
-      setSelectedIdx(0)
       return
     }
 
@@ -732,7 +856,7 @@ function App() {
 
     if (key.sequence && key.sequence.length === 1 && !key.ctrl && !key.meta) {
       setQuery((q) => (q + key.sequence!).slice(0, 50))
-      setSelectedIdx(0)
+      setLevelPositions((p) => ({ ...p, [selectedLevel]: 0 }))
     }
   })
 
@@ -759,11 +883,11 @@ function App() {
             <box style={{ flexDirection: "column", flexGrow: 1, height: contentHeight, width }}>
               <GuessMode
                 word={previewWord}
-                onNext={() => setSelectedIdx((i) => Math.min(words.length - 1, i + 1))}
-                onPrev={() => setSelectedIdx((i) => Math.max(0, i - 1))}
+                onNext={() => setLevelPositions((p) => ({ ...p, [selectedLevel]: Math.min(words.length - 1, (p[selectedLevel] ?? 0) + 1) }))}
+                onPrev={() => setLevelPositions((p) => ({ ...p, [selectedLevel]: Math.max(0, (p[selectedLevel] ?? 0) - 1) }))}
                 onExit={() => setMode("browse")}
                 selectedLevel={selectedLevel}
-                onLevelChange={(level) => { setSelectedLevel(level); setSelectedIdx(0) }}
+                onLevelChange={(level) => { setSelectedLevel(level) }}
                 counts={levelCounts}
               />
             </box>
