@@ -742,6 +742,72 @@ function GuessMode({
   )
 }
 
+// ─── Virtual Navigation ────────────────────────────────────────────────────────
+
+/**
+ * Virtual directional pad — 4 clickable buttons (◄ ▲ ▼ ►) for mouse users.
+ * Each button triggers the same navigation action as its keyboard equivalent.
+ */
+function VirtualNav({
+  onLeft,
+  onUp,
+  onDown,
+  onRight,
+}: {
+  onLeft: () => void
+  onUp: () => void
+  onDown: () => void
+  onRight: () => void
+}) {
+  const { transparent } = useTheme()
+  const btnStyle = { paddingLeft: 1, paddingRight: 1 }
+
+  return (
+    <box
+      title=" nav "
+      style={{
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
+        height: 3,
+        backgroundColor: transparent ? "transparent" : "#1a1717",
+        borderStyle: "single",
+        borderColor: "#2a2525",
+      }}
+    >
+      {/* ◄ Left — cycle level backward */}
+      <box onMouseDown={onLeft} style={btnStyle}>
+        <text fg="#7aa2f7" attributes={TextAttributes.BOLD}> ◄ </text>
+        <text fg="#656363">level</text>
+      </box>
+
+      <text fg="#2a2525"> │ </text>
+
+      {/* ▲ Up — previous word */}
+      <box onMouseDown={onUp} style={btnStyle}>
+        <text fg="#7aa2f7" attributes={TextAttributes.BOLD}> ▲ </text>
+        <text fg="#656363">word</text>
+      </box>
+
+      <text fg="#2a2525"> │ </text>
+
+      {/* ▼ Down — next word */}
+      <box onMouseDown={onDown} style={btnStyle}>
+        <text fg="#7aa2f7" attributes={TextAttributes.BOLD}> ▼ </text>
+        <text fg="#656363">word</text>
+      </box>
+
+      <text fg="#2a2525"> │ </text>
+
+      {/* ► Right — cycle level forward */}
+      <box onMouseDown={onRight} style={btnStyle}>
+        <text fg="#7aa2f7" attributes={TextAttributes.BOLD}> ► </text>
+        <text fg="#656363">level</text>
+      </box>
+    </box>
+  )
+}
+
 // ─── App Root ─────────────────────────────────────────────────────────────────
 
 function App() {
@@ -755,10 +821,13 @@ function App() {
   const [viewedWord, setViewedWord] = useState<WordEntry | null>(null)
 
   const words = useMemo(() => {
-    const byLevel = WORDS.filter((w) => w.spacedTime === selectedLevel)
-    if (!query.trim()) return byLevel
+    if (!query.trim()) {
+      // No search: filter by spaced time level
+      return WORDS.filter((w) => w.spacedTime === selectedLevel)
+    }
     const q = query.toLowerCase()
-    return byLevel.filter(
+    // Search across ALL words regardless of level
+    return WORDS.filter(
       (w) =>
         String(w.word).toLowerCase().includes(q) ||
         String(w.meaning).toLowerCase().includes(q) ||
@@ -860,7 +929,8 @@ function App() {
     }
   })
 
-  const contentHeight = useMemo(() => Math.max(10, height - 2), [height])
+  const contentHeight = useMemo(() => Math.max(10, height - 5), [height])
+// -1 header -3 virtual nav -1 status bar
 
   const previewWord = useMemo((): WordEntry | null => {
     if (words.length > 0) return words[selectedIdx] ?? words[0] ?? null
@@ -913,6 +983,20 @@ function App() {
               </box>
             </box>
           )}
+          <VirtualNav
+            onLeft={() => {
+              const idx = LEVELS.findIndex((l) => l.key === selectedLevel)
+              const prev = idx > 0 ? idx - 1 : LEVELS.length - 1
+              setSelectedLevel(LEVELS[prev]?.key ?? "")
+            }}
+            onUp={() => setLevelPositions((p) => ({ ...p, [selectedLevel]: Math.max(0, (p[selectedLevel] ?? 0) - 1) }))}
+            onDown={() => setLevelPositions((p) => ({ ...p, [selectedLevel]: Math.min(words.length - 1, (p[selectedLevel] ?? 0) + 1) }))}
+            onRight={() => {
+              const idx = LEVELS.findIndex((l) => l.key === selectedLevel)
+              const next = idx < LEVELS.length - 1 ? idx + 1 : 0
+              setSelectedLevel(LEVELS[next]?.key ?? "")
+            }}
+          />
           <StatusBar selected={previewWord} total={WORDS.length} />
         </box>
       </ModeContext.Provider>
@@ -920,7 +1004,7 @@ function App() {
   )
 }
 
-const renderer = await createCliRenderer({ exitOnCtrlC: false })
+const renderer = await createCliRenderer({ exitOnCtrlC: false, useMouse: true })
 process.on("SIGINT", () => {
   renderer.destroy()
   process.exit(0)

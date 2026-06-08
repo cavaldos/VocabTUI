@@ -1,13 +1,51 @@
 [
   {
     "example": "",
-    "id": "378f312e-ab25-80a9-bb3c-ea7c67d6b05d",
+    "id": "379f312e-ab25-80c9-85ec-c529948a1357",
     "level": "",
     "meaning": "",
     "pronounce": "",
     "relatedForms": [],
     "spacedTime": "",
     "synonyms": [],
+    "type": "",
+    "word": "anonymously"
+  },
+  {
+    "example": "",
+    "id": "379f312e-ab25-8093-80d3-fbb3a0f61d9b",
+    "level": "",
+    "meaning": "",
+    "pronounce": "",
+    "relatedForms": [],
+    "spacedTime": "",
+    "synonyms": [],
+    "type": "",
+    "word": "permise"
+  },
+  {
+    "example": "",
+    "id": "379f312e-ab25-8067-a653-ece56ad15fbd",
+    "level": "",
+    "meaning": "",
+    "pronounce": "",
+    "relatedForms": [],
+    "spacedTime": "",
+    "synonyms": [],
+    "type": "",
+    "word": "harmless"
+  },
+  {
+    "example": "",
+    "id": "378f312e-ab25-80a9-bb3c-ea7c67d6b05d",
+    "level": "",
+    "meaning": "",
+    "pronounce": "",
+    "relatedForms": [],
+    "spacedTime": "",
+    "synonyms": [
+      "efficiency"
+    ],
     "type": "",
     "word": "competence"
   },
@@ -19,7 +57,9 @@
     "pronounce": "",
     "relatedForms": [],
     "spacedTime": "",
-    "synonyms": [],
+    "synonyms": [
+      "amend"
+    ],
     "type": "",
     "word": "adjust"
   },
@@ -43,7 +83,9 @@
     "pronounce": "",
     "relatedForms": [],
     "spacedTime": "",
-    "synonyms": [],
+    "synonyms": [
+      "moral"
+    ],
     "type": "",
     "word": "ethical"
   },
@@ -79,7 +121,9 @@
     "pronounce": "| in'dait |",
     "relatedForms": [],
     "spacedTime": "",
-    "synonyms": [],
+    "synonyms": [
+      "accuse"
+    ],
     "type": "",
     "word": "indict"
   },
@@ -91,7 +135,9 @@
     "pronounce": "| ə'næləsis |",
     "relatedForms": [],
     "spacedTime": "",
-    "synonyms": [],
+    "synonyms": [
+      "scrutiny"
+    ],
     "type": "",
     "word": "analysis"
   },
@@ -103,7 +149,9 @@
     "pronounce": "| 'prinsəpəli |",
     "relatedForms": [],
     "spacedTime": "",
-    "synonyms": [],
+    "synonyms": [
+      "essentially"
+    ],
     "type": "adv",
     "word": "principally"
   },
@@ -115,7 +163,11 @@
     "pronounce": "| 'mɔrəl |",
     "relatedForms": [],
     "spacedTime": "",
-    "synonyms": [],
+    "synonyms": [
+      "decent",
+      "incumbent",
+      "ethical"
+    ],
     "type": "adj",
     "word": "moral"
   },
@@ -151,7 +203,9 @@
     "pronounce": "| ,ɔ:ki'strei∫n |",
     "relatedForms": [],
     "spacedTime": "",
-    "synonyms": [],
+    "synonyms": [
+      "coordination"
+    ],
     "type": "",
     "word": "orchestration"
   },
@@ -187,7 +241,10 @@
     "pronounce": "| 'skru:tini |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "analysis",
+      "examination"
+    ],
     "type": "noun",
     "word": "scrutiny"
   },
@@ -295,7 +352,9 @@
     "pronounce": "| 'ri:gres |",
     "relatedForms": [],
     "spacedTime": "",
-    "synonyms": [],
+    "synonyms": [
+      "degradation"
+    ],
     "type": "",
     "word": "regress"
   },
@@ -307,7 +366,9 @@
     "pronounce": "| kə'lu:ʒn |",
     "relatedForms": [],
     "spacedTime": "",
-    "synonyms": [],
+    "synonyms": [
+      "conspiracy"
+    ],
     "type": "noun",
     "word": "collusion"
   },
@@ -331,7 +392,9 @@
     "pronounce": "| ,fʌndə'mentəli |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "essentially"
+    ],
     "type": "adv",
     "word": "fundamentally"
   },
@@ -391,7 +454,9 @@
     "pronounce": "| ,dispə'zes |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "take away"
+    ],
     "type": "verb",
     "word": "dispossess"
   },
@@ -415,7 +480,9 @@
     "pronounce": "| 'weivə |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "hesitate"
+    ],
     "type": "in-verb",
     "word": "waver"
   },
@@ -499,7 +566,10 @@
     "pronounce": "| iks'pektənt |",
     "relatedForms": [],
     "spacedTime": "L4",
-    "synonyms": [],
+    "synonyms": [
+      "expect",
+      "expectancy"
+    ],
     "type": "adj",
     "word": "expectant"
   },
@@ -523,7 +593,9 @@
     "pronounce": "| in'veiʒn |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "aggression"
+    ],
     "type": "noun",
     "word": "invasion"
   },
@@ -547,7 +619,9 @@
     "pronounce": "| aust |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "deport"
+    ],
     "type": "verb",
     "word": "oust"
   },
@@ -571,7 +645,9 @@
     "pronounce": "| 'diskɔ:s |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "narrative"
+    ],
     "type": "noun",
     "word": "discourse"
   },
@@ -595,7 +671,9 @@
     "pronounce": "| kə'rekt |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "accurate"
+    ],
     "type": "adj",
     "word": "correct"
   },
@@ -607,7 +685,9 @@
     "pronounce": "| ,intə'pouz |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "intervene"
+    ],
     "type": "verb",
     "word": "interpose"
   },
@@ -631,7 +711,9 @@
     "pronounce": "| 'ækjərət |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "correct"
+    ],
     "type": "adj",
     "word": "accurate"
   },
@@ -655,7 +737,9 @@
     "pronounce": "| ,inis'keipəbl |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "inevitable"
+    ],
     "type": "adj",
     "word": "inescapable"
   },
@@ -667,7 +751,9 @@
     "pronounce": "| 'nɔ:məli |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "frequently"
+    ],
     "type": "adv",
     "word": "normally"
   },
@@ -751,7 +837,9 @@
     "pronounce": "| kəʊ,ɔ:di'nei∫n |",
     "relatedForms": [],
     "spacedTime": "L4",
-    "synonyms": [],
+    "synonyms": [
+      "orchestration"
+    ],
     "type": "noun",
     "word": "coordination"
   },
@@ -763,7 +851,9 @@
     "pronounce": "| 'kɔmpərəbl |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "equivalent"
+    ],
     "type": "adj",
     "word": "comparable"
   },
@@ -787,7 +877,11 @@
     "pronounce": "| deɡrəˈdāSH(ə)n |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "downturn",
+      "recessions",
+      "regress"
+    ],
     "type": "noun",
     "word": "degradation"
   },
@@ -835,7 +929,9 @@
     "pronounce": "| ,revə'lei∫n |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "disclosures"
+    ],
     "type": "noun",
     "word": "revelation"
   },
@@ -943,7 +1039,9 @@
     "pronounce": "| in'sesntli |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "continuously"
+    ],
     "type": "verb",
     "word": "incessantly"
   },
@@ -991,7 +1089,9 @@
     "pronounce": "| 'endlisli |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "continuously"
+    ],
     "type": "adv",
     "word": "endlessly"
   },
@@ -1003,7 +1103,12 @@
     "pronounce": "| kən'tinjuəsli |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "constantly",
+      "incessantly",
+      "endlessly",
+      "sequential"
+    ],
     "type": "adj",
     "word": "continuously"
   },
@@ -1065,7 +1170,9 @@
       "maintain"
     ],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "sustain"
+    ],
     "type": "verb",
     "word": "uphold"
   },
@@ -1113,7 +1220,9 @@
     "pronounce": "| kən'spirəsi |",
     "relatedForms": [],
     "spacedTime": "",
-    "synonyms": [],
+    "synonyms": [
+      "collusion"
+    ],
     "type": "noun",
     "word": "conspiracy"
   },
@@ -1125,7 +1234,9 @@
     "pronounce": "| ə'mend |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "improve"
+    ],
     "type": "verb",
     "word": "amend"
   },
@@ -1245,7 +1356,9 @@
     "pronounce": "| in'dju:smənt |",
     "relatedForms": [],
     "spacedTime": "",
-    "synonyms": [],
+    "synonyms": [
+      "encouragement"
+    ],
     "type": "noun",
     "word": "inducement"
   },
@@ -1305,7 +1418,9 @@
     "pronounce": "| 'noutwə:ði |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "notably"
+    ],
     "type": "adj",
     "word": "noteworthy"
   },
@@ -1317,7 +1432,10 @@
     "pronounce": "| ə'preizl |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "evaluate",
+      "appreciate"
+    ],
     "type": "noun",
     "word": "appraisal"
   },
@@ -1377,7 +1495,9 @@
     "pronounce": "| ,eli'mentəri |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "primitive"
+    ],
     "type": "adj",
     "word": "elementary"
   },
@@ -1389,7 +1509,9 @@
     "pronounce": "| ri,laiə'biləti |",
     "relatedForms": [],
     "spacedTime": "",
-    "synonyms": [],
+    "synonyms": [
+      "integrity"
+    ],
     "type": "noun",
     "word": "reliability"
   },
@@ -1425,7 +1547,9 @@
     "pronounce": "| 'primitiv |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "elementary"
+    ],
     "type": "adj",
     "word": "primitive"
   },
@@ -1521,7 +1645,9 @@
     "pronounce": "| 'ænouteit |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "explain"
+    ],
     "type": "verb",
     "word": "annotate"
   },
@@ -1581,7 +1707,9 @@
     "pronounce": "| spɑ:s |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "barely"
+    ],
     "type": "adj",
     "word": "sparse"
   },
@@ -1782,7 +1910,9 @@
     "pronounce": "| 'kɔηkə |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "occupy"
+    ],
     "type": "verb",
     "word": "conquer"
   },
@@ -1818,7 +1948,9 @@
     "pronounce": "| ,ʌn'rævl |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "tear"
+    ],
     "type": "verb",
     "word": "unravel"
   },
@@ -2084,7 +2216,9 @@
     "pronounce": "| ə'bʌndənt |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "redundant"
+    ],
     "type": "adj",
     "word": "abundant"
   },
@@ -2159,7 +2293,10 @@
       "to a large extent"
     ],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "fundamentally",
+      "principally"
+    ],
     "type": "adv",
     "word": "essentially"
   },
@@ -2191,7 +2328,10 @@
       "unwilling"
     ],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "hesitant",
+      "hesitate"
+    ],
     "type": "adj",
     "word": "reluctant"
   },
@@ -2286,7 +2426,7 @@
     "meaning": "hết hiệu lực",
     "pronounce": "| iks'paiə |",
     "relatedForms": [],
-    "spacedTime": "L1",
+    "spacedTime": "L2",
     "synonyms": [],
     "type": "verb",
     "word": "expire"
@@ -2323,7 +2463,10 @@
     "pronounce": "| in'vɔlvmənt |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "intervention",
+      "engage"
+    ],
     "type": "noun",
     "word": "involvement"
   },
@@ -2371,7 +2514,10 @@
     "pronounce": "| ri'nauns |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "abolish",
+      "abandon"
+    ],
     "type": "verb",
     "word": "renounce"
   },
@@ -2441,7 +2587,7 @@
     "spacedTime": "L2",
     "synonyms": [],
     "type": "verb",
-    "word": "exaggerating"
+    "word": "exaggerate"
   },
   {
     "example": "The rival company tried to sabotage their product launch.",
@@ -2535,7 +2681,9 @@
     "pronounce": "| dis'dʒɔintid |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "detach"
+    ],
     "type": "adj",
     "word": "disjointed"
   },
@@ -2755,7 +2903,10 @@
       "decently"
     ],
     "spacedTime": "",
-    "synonyms": [],
+    "synonyms": [
+      "moral",
+      "reputable"
+    ],
     "type": "adj",
     "word": "decent"
   },
@@ -2775,7 +2926,10 @@
       "remaining"
     ],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "redundant",
+      "redundancy"
+    ],
     "type": "noun",
     "word": "residual"
   },
@@ -2835,7 +2989,10 @@
     "pronounce": "| in'di:d |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "defer",
+      "procrastinate"
+    ],
     "type": "phrase",
     "word": "put off"
   },
@@ -2966,7 +3123,7 @@
     "meaning": "ngắn gọn, súc tích",
     "pronounce": "| kən'sais |",
     "relatedForms": [],
-    "spacedTime": "L4",
+    "spacedTime": "L1",
     "synonyms": [],
     "type": "adj",
     "word": "concise"
@@ -3053,7 +3210,9 @@
     "pronounce": "| 'pri:tekst |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "excuse"
+    ],
     "type": "noun",
     "word": "pretext"
   },
@@ -3089,7 +3248,9 @@
     "pronounce": "| iks'pektənsi |",
     "relatedForms": [],
     "spacedTime": "L4",
-    "synonyms": [],
+    "synonyms": [
+      "expectant"
+    ],
     "type": "noun",
     "word": "expectancy"
   },
@@ -3257,7 +3418,9 @@
     "pronounce": "| in'kʌmbənt |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "moral"
+    ],
     "type": "noun",
     "word": "incumbent"
   },
@@ -3281,7 +3444,11 @@
     "pronounce": "| di'tæt∫ |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "segregation",
+      "decouple",
+      "disjointed"
+    ],
     "type": "verb",
     "word": "detach"
   },
@@ -3641,7 +3808,9 @@
     "pronounce": "| 'noutəbli |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "noteworthy"
+    ],
     "type": "adv",
     "word": "notably"
   },
@@ -3931,7 +4100,9 @@
     "pronounce": "| ə'kɔ:dəns |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "suitable"
+    ],
     "type": "noun",
     "word": "accordance"
   },
@@ -3955,7 +4126,10 @@
     "pronounce": "| ,ri:in'steit |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "reconstitute",
+      "resilience"
+    ],
     "type": "verb",
     "word": "reinstate"
   },
@@ -4135,7 +4309,9 @@
     "pronounce": "| ,ri:ə,bili'tei∫n |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "resilience"
+    ],
     "type": "noun",
     "word": "rehabilitation"
   },
@@ -4600,7 +4776,9 @@
       "the second"
     ],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "immediately"
+    ],
     "type": "adv",
     "word": "instantaneously"
   },
@@ -4636,7 +4814,9 @@
     "pronounce": "| kə'mitmənt |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "engagement"
+    ],
     "type": "noun",
     "word": "commitment"
   },
@@ -4648,7 +4828,11 @@
     "pronounce": "| ri'dʌndənt |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "residual",
+      "residue",
+      "abundant"
+    ],
     "type": "adj",
     "word": "redundant"
   },
@@ -4861,7 +5045,9 @@
     "pronounce": "| ,ri:'kɔnstitju:t |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "reinstate"
+    ],
     "type": "verb",
     "word": "reconstitute"
   },
@@ -4988,7 +5174,9 @@
       "unwarranted"
     ],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "provisional"
+    ],
     "type": "adj",
     "word": "precarious"
   },
@@ -5192,7 +5380,9 @@
     "pronounce": "| prə'praiətri |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "exclusive"
+    ],
     "type": "adj",
     "word": "proprietary"
   },
@@ -5326,7 +5516,10 @@
     "pronounce": "| 'kɔnstəntli |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "continuously",
+      "sequential"
+    ],
     "type": "adv",
     "word": "constantly"
   },
@@ -5499,7 +5692,9 @@
     "pronounce": "| in'geidʒmənt |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "commitment"
+    ],
     "type": "noun",
     "word": "engagement"
   },
@@ -5643,7 +5838,9 @@
     "pronounce": "| dis'krepənsi |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "distinction"
+    ],
     "type": "noun",
     "word": "discrepancy"
   },
@@ -5797,7 +5994,9 @@
       "rampant"
     ],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "frequently"
+    ],
     "type": "adj",
     "word": "prevalent"
   },
@@ -5880,7 +6079,9 @@
       "unpredictably"
     ],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "accidentally"
+    ],
     "type": "adv",
     "word": "coincidentally"
   },
@@ -5903,7 +6104,9 @@
       "unpredictably"
     ],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "coincidentally"
+    ],
     "type": "adv",
     "word": "accidentally"
   },
@@ -5927,7 +6130,9 @@
     "pronounce": "| 'teik ə'wei |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "dispossess"
+    ],
     "type": "phrase",
     "word": "take away"
   },
@@ -6551,7 +6756,9 @@
     "pronounce": "| ə'kauntfə |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "possessed"
+    ],
     "type": "phrase",
     "word": "account for"
   },
@@ -6671,7 +6878,9 @@
     "pronounce": "| ɑ:skfɔ: |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "demand"
+    ],
     "type": "phrase",
     "word": "ask for"
   },
@@ -6995,7 +7204,9 @@
     "pronounce": "| 'fɔ:kɑ:st |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "predict"
+    ],
     "type": "noun",
     "word": "forecast"
   },
@@ -7055,7 +7266,9 @@
     "pronounce": "| prə'hibit; prəʊ'hibit |",
     "relatedForms": [],
     "spacedTime": "",
-    "synonyms": [],
+    "synonyms": [
+      "prevent"
+    ],
     "type": "noun",
     "word": "prohibit"
   },
@@ -7103,7 +7316,10 @@
     "pronounce": "| sək'sesivli |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "respectively",
+      "sequential"
+    ],
     "type": "adv",
     "word": "successively"
   },
@@ -7115,7 +7331,13 @@
     "pronounce": "| si'kwen∫əl |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "respectively",
+      "continuously",
+      "constantly",
+      "successively",
+      "consecutive"
+    ],
     "type": "adj",
     "word": "sequential"
   },
@@ -7127,7 +7349,9 @@
     "pronounce": "| iks'klu:siv |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "proprietary"
+    ],
     "type": "adj",
     "word": "exclusive"
   },
@@ -7199,7 +7423,10 @@
     "pronounce": "| im'pouz |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "force",
+      "compel"
+    ],
     "type": "verb",
     "word": "impose"
   },
@@ -7355,7 +7582,9 @@
     "pronounce": "| kən'kʌrəns |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "simultaneously"
+    ],
     "type": "noun",
     "word": "concurrence"
   },
@@ -7379,7 +7608,9 @@
     "pronounce": "| kən'fes |",
     "relatedForms": [],
     "spacedTime": "L4",
-    "synonyms": [],
+    "synonyms": [
+      "Admit"
+    ],
     "type": "verb",
     "word": "confess"
   },
@@ -7439,7 +7670,10 @@
     "pronounce": "| ,kɒri'spɒnd |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "appropriate",
+      "equivalent"
+    ],
     "type": "in-verb",
     "word": "correspond"
   },
@@ -7463,7 +7697,9 @@
     "pronounce": "| sə'spend |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "postpone"
+    ],
     "type": "verb",
     "word": "suspend"
   },
@@ -7523,7 +7759,10 @@
     "pronounce": "| di' zai ərə bli |",
     "relatedForms": [],
     "spacedTime": "L4",
-    "synonyms": [],
+    "synonyms": [
+      "desire",
+      "desirable"
+    ],
     "type": "adv",
     "word": "desirably"
   },
@@ -7547,7 +7786,10 @@
     "pronounce": "| ,di:'kʌpl |",
     "relatedForms": [],
     "spacedTime": "L4",
-    "synonyms": [],
+    "synonyms": [
+      "detach",
+      "segregation"
+    ],
     "type": "verb",
     "word": "decouple"
   },
@@ -7557,9 +7799,19 @@
     "level": "",
     "meaning": "phân tán, giải tán",
     "pronounce": "| di'spə:səl |",
-    "relatedForms": [],
+    "relatedForms": [
+      "diaspora",
+      "diffusion",
+      "dispersion",
+      "distribution",
+      "scattering",
+      "spreading",
+      "thinning out"
+    ],
     "spacedTime": "L4",
-    "synonyms": [],
+    "synonyms": [
+      "distribute"
+    ],
     "type": "noun",
     "word": "dispersal"
   },
@@ -7583,7 +7835,9 @@
     "pronounce": "| 'mitigeit |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "relieve"
+    ],
     "type": "verb",
     "word": "mitigate"
   },
@@ -7618,7 +7872,7 @@
     "meaning": "nghiêm khắc, hoàn toàn",
     "pronounce": "| 'striktli |",
     "relatedForms": [],
-    "spacedTime": "L3",
+    "spacedTime": "L5",
     "synonyms": [],
     "type": "adv",
     "word": "strictly"
@@ -7703,7 +7957,11 @@
     "pronounce": "| ris'pektivli |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "sequential",
+      "successively",
+      "consecutive"
+    ],
     "type": "adv",
     "word": "respectively"
   },
@@ -7727,7 +7985,9 @@
     "pronounce": "| ,intə'sept |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "prevent"
+    ],
     "type": "verb",
     "word": "intercept"
   },
@@ -7811,7 +8071,9 @@
     "pronounce": "| grɑ:nt |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "confer"
+    ],
     "type": "noun",
     "word": "grant"
   },
@@ -7842,7 +8104,11 @@
       "take a raincheck"
     ],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "procrastinate",
+      "postpone",
+      "put off"
+    ],
     "type": "verb",
     "word": "defer"
   },
@@ -7890,8 +8156,12 @@
     "pronounce": "| ə'kɔmpli∫ |",
     "relatedForms": [],
     "spacedTime": "L4",
-    "synonyms": [],
-    "type": "adv",
+    "synonyms": [
+      "attain",
+      "achieve",
+      "obtain"
+    ],
+    "type": "verb",
     "word": "accomplish"
   },
   {
@@ -7914,7 +8184,9 @@
     "pronounce": "| ə'dʒʌstmənt |",
     "relatedForms": [],
     "spacedTime": "L4",
-    "synonyms": [],
+    "synonyms": [
+      "amend"
+    ],
     "type": "noun",
     "word": "adjustment"
   },
@@ -7938,7 +8210,12 @@
     "pronounce": "| səb' stæn ∫əli |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "dramatically",
+      "significant",
+      "substantial",
+      "substance"
+    ],
     "type": "adv",
     "word": "substantially"
   },
@@ -8108,7 +8385,10 @@
       "consciously(.adv)"
     ],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "deliberate",
+      "intentional"
+    ],
     "type": "adj",
     "word": "conscious"
   },
@@ -8192,7 +8472,10 @@
     "pronounce": "| in'sentiv |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "encourage",
+      "encouragement"
+    ],
     "type": "adj",
     "word": "incentive"
   },
@@ -8249,7 +8532,9 @@
       "the second"
     ],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "immediately"
+    ],
     "type": "adv",
     "word": "instantly"
   },
@@ -8276,7 +8561,9 @@
       "refutation"
     ],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "ambiguity"
+    ],
     "type": "noun",
     "word": "contradiction"
   },
@@ -8369,7 +8656,9 @@
       "revelation"
     ],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "revelation"
+    ],
     "type": "noun",
     "word": "disclosures"
   },
@@ -8393,7 +8682,9 @@
     "pronounce": "| ig,zæmi'nei∫n |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "scrutiny"
+    ],
     "type": "",
     "word": "examination"
   },
@@ -8405,7 +8696,9 @@
     "pronounce": "| ri'li:v |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "mitigate"
+    ],
     "type": "verb",
     "word": "relieve"
   },
@@ -8597,7 +8890,10 @@
     "pronounce": "| pə'spoun |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "suspend",
+      "defer"
+    ],
     "type": "verb",
     "word": "postpone"
   },
@@ -8633,7 +8929,9 @@
     "pronounce": "| pə'zest |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "account for"
+    ],
     "type": "adj",
     "word": "possessed"
   },
@@ -8654,7 +8952,9 @@
       "undecided"
     ],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "reluctant"
+    ],
     "type": "adj",
     "word": "hesitant"
   },
@@ -8666,7 +8966,9 @@
     "pronounce": "| kən'tentid |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "satisfied"
+    ],
     "type": "adj",
     "word": "contented"
   },
@@ -8690,7 +8992,9 @@
     "pronounce": "| im'pɑ:t |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "convey"
+    ],
     "type": "verb",
     "word": "impart"
   },
@@ -8798,7 +9102,9 @@
     "pronounce": "| ri'strik∫n |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "restrain"
+    ],
     "type": "noun",
     "word": "restriction"
   },
@@ -8918,7 +9224,9 @@
     "pronounce": "| ri'mɑ:kəbl |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "considerable"
+    ],
     "type": "adj",
     "word": "remarkable"
   },
@@ -8930,7 +9238,11 @@
     "pronounce": "| kən'sidərəbl |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "remarkable",
+      "dramatically",
+      "significant"
+    ],
     "type": "adj",
     "word": "considerable"
   },
@@ -8942,7 +9254,11 @@
     "pronounce": "| sig'nifikənt |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "substantially",
+      "dramatically",
+      "considerable"
+    ],
     "type": "adj",
     "word": "significant"
   },
@@ -8954,7 +9270,11 @@
     "pronounce": "| drə'mætikəli |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "substantially",
+      "significant",
+      "considerable"
+    ],
     "type": "adv",
     "word": "dramatically"
   },
@@ -8966,7 +9286,9 @@
     "pronounce": "| ri'frein |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "continent"
+    ],
     "type": "noun",
     "word": "refrain"
   },
@@ -9040,7 +9362,9 @@
       "popular"
     ],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "frequently"
+    ],
     "type": "adv",
     "word": "popularly"
   },
@@ -9052,7 +9376,9 @@
     "pronounce": "| ə'kwaiə |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "obtain"
+    ],
     "type": "verb",
     "word": "acquire"
   },
@@ -9076,7 +9402,9 @@
     "pronounce": "| i'nɔ:məs |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "massive"
+    ],
     "type": "adj",
     "word": "enormous"
   },
@@ -9136,7 +9464,9 @@
     "pronounce": "| 'infərəns |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "speculation"
+    ],
     "type": "noun",
     "word": "inference"
   },
@@ -9210,7 +9540,9 @@
       "relevancy"
     ],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "concern"
+    ],
     "type": "noun",
     "word": "relevance"
   },
@@ -9244,7 +9576,10 @@
       "take a raincheck"
     ],
     "spacedTime": "L4",
-    "synonyms": [],
+    "synonyms": [
+      "defer",
+      "put off"
+    ],
     "type": "verb",
     "word": "procrastinate"
   },
@@ -9304,7 +9639,9 @@
     "pronounce": "| əd'vaizə |",
     "relatedForms": [],
     "spacedTime": "L4",
-    "synonyms": [],
+    "synonyms": [
+      "confer"
+    ],
     "type": "noun",
     "word": "adviser"
   },
@@ -9352,7 +9689,9 @@
     "pronounce": "| 'æləkeit |",
     "relatedForms": [],
     "spacedTime": "L4",
-    "synonyms": [],
+    "synonyms": [
+      "distribute"
+    ],
     "type": "noun",
     "word": "allocate"
   },
@@ -9532,7 +9871,9 @@
     "pronounce": "əˈkər",
     "relatedForms": [],
     "spacedTime": "L4",
-    "synonyms": [],
+    "synonyms": [
+      "emerge"
+    ],
     "type": "verb",
     "word": "occur"
   },
@@ -9640,7 +9981,9 @@
     "pronounce": "| 'rʌfli |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "Preliminary"
+    ],
     "type": "adv",
     "word": "roughly"
   },
@@ -9700,7 +10043,9 @@
     "pronounce": "| 'sætisfaid |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "contented"
+    ],
     "type": "adj",
     "word": "satisfied"
   },
@@ -9772,7 +10117,11 @@
     "pronounce": "| ,intə'vi:n |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "interfere",
+      "intervention",
+      "interpose"
+    ],
     "type": "verb",
     "word": "intervene"
   },
@@ -9832,7 +10181,10 @@
     "pronounce": "| 'implikeit |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "involved",
+      "engage"
+    ],
     "type": "noun",
     "word": "implicate"
   },
@@ -9880,7 +10232,9 @@
     "pronounce": "| pri'liminəri |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "roughly"
+    ],
     "type": "adj",
     "word": "Preliminary"
   },
@@ -9892,7 +10246,9 @@
     "pronounce": "| prə'viʒənl |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "precarious"
+    ],
     "type": "adj",
     "word": "provisional"
   },
@@ -9904,7 +10260,9 @@
     "pronounce": "| kən'vi:n |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "gather"
+    ],
     "type": "verb",
     "word": "convene"
   },
@@ -9952,7 +10310,9 @@
     "pronounce": "| pə'sju:t |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "chase"
+    ],
     "type": "noun",
     "word": "pursuit"
   },
@@ -10092,7 +10452,9 @@
       "thought"
     ],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "conceive"
+    ],
     "type": "adj",
     "word": "cognitive"
   },
@@ -10104,7 +10466,10 @@
     "pronounce": "| i'kwivələnt |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "correspond",
+      "comparable"
+    ],
     "type": "adj",
     "word": "equivalent"
   },
@@ -10140,7 +10505,9 @@
     "pronounce": "| pə'tein |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "relevant"
+    ],
     "type": "phrase",
     "word": "pertain"
   },
@@ -10272,7 +10639,10 @@
     "pronounce": "| ri'ziliəns |",
     "relatedForms": [],
     "spacedTime": "L4",
-    "synonyms": [],
+    "synonyms": [
+      "reinstate",
+      "rehabilitation"
+    ],
     "type": "noun",
     "word": "resilience"
   },
@@ -10406,7 +10776,9 @@
     "pronounce": "| in'evitəbl |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "inescapable"
+    ],
     "type": "adj",
     "word": "inevitable"
   },
@@ -10418,7 +10790,9 @@
     "pronounce": "| 'repjutəbl |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "decent"
+    ],
     "type": "adj",
     "word": "reputable"
   },
@@ -10514,7 +10888,10 @@
     "pronounce": "| kən'sekjutiv |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "respectively",
+      "sequential"
+    ],
     "type": "adj",
     "word": "consecutive"
   },
@@ -10538,7 +10915,9 @@
     "pronounce": "| in'tegriti |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "reliability"
+    ],
     "type": "noun",
     "word": "integrity"
   },
@@ -10562,7 +10941,9 @@
     "pronounce": "| 'rezidju: |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "redundant"
+    ],
     "type": "noun",
     "word": "residue"
   },
@@ -10595,7 +10976,10 @@
       "setting apart"
     ],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "detach",
+      "decouple"
+    ],
     "type": "noun",
     "word": "segregation"
   },
@@ -10663,7 +11047,9 @@
       "unemployment"
     ],
     "spacedTime": "L4",
-    "synonyms": [],
+    "synonyms": [
+      "residual"
+    ],
     "type": "noun",
     "word": "redundancy"
   },
@@ -10711,7 +11097,9 @@
     "pronounce": "| in'kʌridʒ |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "incentive"
+    ],
     "type": "verb",
     "word": "encourage"
   },
@@ -10735,7 +11123,11 @@
     "pronounce": "| 'su:təbl |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "compatible",
+      "appropriate",
+      "accordance"
+    ],
     "type": "adj",
     "word": "suitable"
   },
@@ -10747,7 +11139,10 @@
     "pronounce": "| BrE dɪˈlɪb(ə)rət, AmE dəˈlɪb(ə)rət |",
     "relatedForms": [],
     "spacedTime": "L4",
-    "synonyms": [],
+    "synonyms": [
+      "intentional",
+      "conscious"
+    ],
     "type": "adj",
     "word": "deliberate"
   },
@@ -10759,7 +11154,10 @@
     "pronounce": "| in'ten∫ənl |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "deliberate",
+      "conscious"
+    ],
     "type": "adj",
     "word": "intentional"
   },
@@ -10771,7 +11169,11 @@
     "pronounce": "| kən'sə:n |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "condemn",
+      "relevant",
+      "relevance"
+    ],
     "type": "verb",
     "word": "concern"
   },
@@ -10820,7 +11222,9 @@
       "stick it out"
     ],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "persist"
+    ],
     "type": "verb",
     "word": "persevere"
   },
@@ -10924,11 +11328,13 @@
     "example": "The children were curious about how the machine worked.",
     "id": "22af312e-ab25-809c-81af-c5435a7ef7a5",
     "level": "",
-    "meaning": "ham muốn tìm hiểu",
+    "meaning": "tò mò",
     "pronounce": "'kjuəriəs |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "intriguing"
+    ],
     "type": "adj",
     "word": "curious"
   },
@@ -10952,7 +11358,11 @@
     "pronounce": "| ə'proupriət |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "suitable",
+      "compatible",
+      "correspond"
+    ],
     "type": "adj",
     "word": "appropriate"
   },
@@ -11084,7 +11494,9 @@
     "pronounce": "| di'zaiə |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "desirably"
+    ],
     "type": "noun",
     "word": "desire"
   },
@@ -11156,7 +11568,10 @@
     "pronounce": "| kəm'pætəbl |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "suitable",
+      "appropriate"
+    ],
     "type": "adj",
     "word": "compatible"
   },
@@ -11216,7 +11631,9 @@
     "pronounce": "| BrE ˌdɛmənˈstreɪʃn, AmE ˌdɛmənˈstreɪʃən |",
     "relatedForms": [],
     "spacedTime": "",
-    "synonyms": [],
+    "synonyms": [
+      "exhibit"
+    ],
     "type": "noun",
     "word": "demonstration"
   },
@@ -11320,7 +11737,9 @@
     "pronounce": "| 'beəli |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "sparse"
+    ],
     "type": "adv",
     "word": "barely"
   },
@@ -11344,7 +11763,9 @@
     "pronounce": "| 'efət |",
     "relatedForms": [],
     "spacedTime": "L4",
-    "synonyms": [],
+    "synonyms": [
+      "attempt"
+    ],
     "type": "noun",
     "word": "effort"
   },
@@ -11540,7 +11961,7 @@
     "meaning": "nhỏ lẻ, bán lẻ",
     "pronounce": "| 'ri:teil |",
     "relatedForms": [],
-    "spacedTime": "L3",
+    "spacedTime": "L4",
     "synonyms": [],
     "type": "noun",
     "word": "retail"
@@ -11589,7 +12010,9 @@
     "pronounce": "| ,si ml' tei ni əs li |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "concurrence"
+    ],
     "type": "adv",
     "word": "simultaneously"
   },
@@ -11793,7 +12216,11 @@
     "pronounce": "| dis'krimineit |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "contrast",
+      "distinction",
+      "distinguish"
+    ],
     "type": "verb",
     "word": "discriminate"
   },
@@ -11853,7 +12280,11 @@
     "pronounce": "| 'kɔntrəri |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "distinguish",
+      "opposite",
+      "opponent"
+    ],
     "type": "adj",
     "word": "contrary"
   },
@@ -11912,7 +12343,7 @@
     "meaning": "sửa chữa",
     "pronounce": "| ri'peə |",
     "relatedForms": [],
-    "spacedTime": "L3",
+    "spacedTime": "L4",
     "synonyms": [],
     "type": "noun",
     "word": "repair"
@@ -11925,7 +12356,10 @@
     "pronounce": "| səb'stæn∫əl |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "substantially",
+      "substance"
+    ],
     "type": "adj",
     "word": "substantial"
   },
@@ -12069,7 +12503,9 @@
     "pronounce": "| ə'pounənt |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "contrary"
+    ],
     "type": "adj",
     "word": "opponent"
   },
@@ -12081,7 +12517,9 @@
     "pronounce": "| ri'se∫n |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "degradation"
+    ],
     "type": "noun",
     "word": "recessions"
   },
@@ -12189,7 +12627,9 @@
     "pronounce": "| straiv |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "attempt"
+    ],
     "type": "verb",
     "word": "strive"
   },
@@ -12345,7 +12785,9 @@
     "pronounce": "|,di:'steibilaiz |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "disturb"
+    ],
     "type": "verb",
     "word": "destabilize"
   },
@@ -12561,7 +13003,10 @@
     "pronounce": "| 'sʌbstəns |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "substantial",
+      "substantially"
+    ],
     "type": "noun",
     "word": "substance"
   },
@@ -12693,7 +13138,9 @@
     "pronounce": "| 'sæηk∫n |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "approval"
+    ],
     "type": "noun",
     "word": "sanction"
   },
@@ -12704,7 +13151,7 @@
     "meaning": "hiếm thấy",
     "pronounce": "| reə |",
     "relatedForms": [],
-    "spacedTime": "L3",
+    "spacedTime": "L4",
     "synonyms": [],
     "type": "adj",
     "word": "rare"
@@ -12729,7 +13176,13 @@
     "pronounce": "| 'fri:kwəntli |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "prevalent",
+      "dominant",
+      "popularly",
+      "recurrent",
+      "normally"
+    ],
     "type": "adv",
     "word": "frequently"
   },
@@ -12765,7 +13218,9 @@
     "pronounce": "| BrE dɪˈlɪb(ə)rət, AmE dəˈlɪb(ə)rət |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "intend"
+    ],
     "type": "verb",
     "word": "deliberate"
   },
@@ -12789,7 +13244,13 @@
     "pronounce": "| in'geidʒ |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "relevant",
+      "implicate",
+      "involved",
+      "involvement",
+      "participate"
+    ],
     "type": "verb",
     "word": "engage"
   },
@@ -12933,7 +13394,11 @@
     "pronounce": "| in'djuə |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "sustain",
+      "suffer",
+      "incur"
+    ],
     "type": "verb",
     "word": "endure"
   },
@@ -13043,7 +13508,9 @@
       "available"
     ],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "available"
+    ],
     "type": "adj",
     "word": "accessible"
   },
@@ -13091,7 +13558,9 @@
     "pronounce": "| 'nærətiv |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "discourse"
+    ],
     "type": "noun",
     "word": "narrative"
   },
@@ -13235,7 +13704,9 @@
     "pronounce": "| in'tri:giη |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "curious"
+    ],
     "type": "adj",
     "word": "intriguing"
   },
@@ -13343,7 +13814,9 @@
     "pronounce": "| prə'pouzl |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "bid"
+    ],
     "type": "noun",
     "word": "proposal"
   },
@@ -13440,7 +13913,7 @@
     "relatedForms": [],
     "spacedTime": "L2",
     "synonyms": [],
-    "type": "verb",
+    "type": "noun",
     "word": "praise"
   },
   {
@@ -13597,7 +14070,10 @@
     "pronounce": "| in'kʌridʒmənt |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "incentive",
+      "inducement"
+    ],
     "type": "noun",
     "word": "encouragement"
   },
@@ -13849,7 +14325,9 @@
     "pronounce": "| ə'veiləbl |",
     "relatedForms": [],
     "spacedTime": "L4",
-    "synonyms": [],
+    "synonyms": [
+      "accessible"
+    ],
     "type": "adj",
     "word": "available"
   },
@@ -13929,7 +14407,11 @@
       "require"
     ],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "implicate",
+      "intervention",
+      "engage"
+    ],
     "type": "adj",
     "word": "involved"
   },
@@ -13977,7 +14459,9 @@
     "pronounce": "| in'tend |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "deliberate"
+    ],
     "type": "verb",
     "word": "intend"
   },
@@ -14109,7 +14593,9 @@
     "pronounce": "| ri'kʌrənt |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "frequently"
+    ],
     "type": "adj",
     "word": "recurrent"
   },
@@ -14217,7 +14703,9 @@
     "pronounce": "| di'pɔ:t |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "oust"
+    ],
     "type": "verb",
     "word": "deport"
   },
@@ -14313,7 +14801,10 @@
     "pronounce": "| 'gæðə |",
     "relatedForms": [],
     "spacedTime": "L4",
-    "synonyms": [],
+    "synonyms": [
+      "aggregate",
+      "convene"
+    ],
     "type": "verb",
     "word": "gather"
   },
@@ -14493,7 +14984,9 @@
     "pronounce": "| di'zaiərəbl |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "desirably"
+    ],
     "type": "adj",
     "word": "desirable"
   },
@@ -14529,7 +15022,11 @@
     "pronounce": "| ,intə'fiə |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "intervene",
+      "intervention",
+      "involve"
+    ],
     "type": "verb",
     "word": "interfere"
   },
@@ -14589,7 +15086,9 @@
     "pronounce": "| ə'gre∫n |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "invasion"
+    ],
     "type": "noun",
     "word": "aggression"
   },
@@ -14671,7 +15170,9 @@
       "proficiency"
     ],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "competence"
+    ],
     "type": "noun",
     "word": "efficiency"
   },
@@ -14683,7 +15184,11 @@
     "pronounce": "| 'reləvənt |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "pertain",
+      "engage",
+      "concern"
+    ],
     "type": "adj",
     "word": "relevant"
   },
@@ -14935,7 +15440,9 @@
     "pronounce": "| ə'pri:∫ieit |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "appraisal"
+    ],
     "type": "verb",
     "word": "appreciate"
   },
@@ -15067,7 +15574,10 @@
     "pronounce": "| ris'treind |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "confine",
+      "restriction"
+    ],
     "type": "adj",
     "word": "restrain"
   },
@@ -15079,7 +15589,9 @@
     "pronounce": "| ə'pru:vəl |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "sanction"
+    ],
     "type": "noun",
     "word": "approval"
   },
@@ -15124,7 +15636,10 @@
       "the second"
     ],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "instantaneously",
+      "instantly"
+    ],
     "type": "adv",
     "word": "immediately"
   },
@@ -15186,7 +15701,9 @@
     "pronounce": "| di'strɔi |",
     "relatedForms": [],
     "spacedTime": "L4",
-    "synonyms": [],
+    "synonyms": [
+      "devastate"
+    ],
     "type": "noun",
     "word": "destroy"
   },
@@ -15258,7 +15775,9 @@
     "pronounce": "| di'pres |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "depression"
+    ],
     "type": "verb",
     "word": "depress"
   },
@@ -15378,7 +15897,9 @@
     "pronounce": "| 'devəsteit |",
     "relatedForms": [],
     "spacedTime": "",
-    "synonyms": [],
+    "synonyms": [
+      "destroy"
+    ],
     "type": "verb",
     "word": "devastate"
   },
@@ -15414,7 +15935,9 @@
     "pronounce": "| 'dɒminənt |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "frequently"
+    ],
     "type": "adj",
     "word": "dominant"
   },
@@ -15450,7 +15973,9 @@
     "pronounce": "| 'evidəns |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "proof"
+    ],
     "type": "noun",
     "word": "evidence"
   },
@@ -15678,7 +16203,13 @@
     "pronounce": "| ,intə'ven∫n |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "interfere",
+      "involvement",
+      "involve",
+      "involved",
+      "intervene"
+    ],
     "type": "noun",
     "word": "intervention"
   },
@@ -15726,7 +16257,9 @@
     "pronounce": "| 'daʊntɜ: n |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "degradation"
+    ],
     "type": "noun",
     "word": "downturn"
   },
@@ -15762,7 +16295,9 @@
     "pronounce": "| 'ægrigət |",
     "relatedForms": [],
     "spacedTime": "L4",
-    "synonyms": [],
+    "synonyms": [
+      "gather"
+    ],
     "type": "verb",
     "word": "aggregate"
   },
@@ -15822,7 +16357,9 @@
     "pronounce": "| 'kɔmprəmaiz |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "concession"
+    ],
     "type": "noun",
     "word": "compromise"
   },
@@ -15850,7 +16387,9 @@
       "conceding"
     ],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "compromise"
+    ],
     "type": "noun",
     "word": "concession"
   },
@@ -15970,7 +16509,9 @@
     "pronounce": "| pru:f |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "evidence"
+    ],
     "type": "noun",
     "word": "proof"
   },
@@ -16006,7 +16547,9 @@
     "pronounce": "| ,spekju'lei∫n |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "inference"
+    ],
     "type": "noun",
     "word": "speculation"
   },
@@ -16126,7 +16669,9 @@
     "pronounce": "| ə'weənis |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "conceive"
+    ],
     "type": "noun",
     "word": "awareness"
   },
@@ -16366,7 +16911,9 @@
     "pronounce": "| 'ri:zn |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "excuse"
+    ],
     "type": "noun",
     "word": "reason"
   },
@@ -16390,7 +16937,9 @@
     "pronounce": "| reiz |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "convince"
+    ],
     "type": "verb",
     "word": "raise"
   },
@@ -16589,7 +17138,9 @@
     "pronounce": "| 'ɔpəzit |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "contrary"
+    ],
     "type": "adj",
     "word": "opposite"
   },
@@ -16637,7 +17188,9 @@
     "pronounce": "| mæs |",
     "relatedForms": [],
     "spacedTime": "",
-    "synonyms": [],
+    "synonyms": [
+      "massive"
+    ],
     "type": "noun",
     "word": "mass"
   },
@@ -16865,7 +17418,9 @@
     "pronounce": "| 'kɔntinənt |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "refrain"
+    ],
     "type": "verb",
     "word": "continent"
   },
@@ -17383,7 +17938,9 @@
       "taper"
     ],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "narrow"
+    ],
     "type": "verb",
     "word": "diminish"
   },
@@ -17407,7 +17964,9 @@
     "pronounce": "| tiə |",
     "relatedForms": [],
     "spacedTime": "L4",
-    "synonyms": [],
+    "synonyms": [
+      "unravel"
+    ],
     "type": "noun",
     "word": "tear"
   },
@@ -17455,7 +18014,9 @@
     "pronounce": "| is'tæbli∫ |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "constitute"
+    ],
     "type": "verb",
     "word": "establish"
   },
@@ -17479,7 +18040,9 @@
     "pronounce": "| i'væljueit |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "appraisal"
+    ],
     "type": "verb",
     "word": "evaluate"
   },
@@ -17559,7 +18122,9 @@
       "rule out"
     ],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "eliminate"
+    ],
     "type": "verb",
     "word": "exclude"
   },
@@ -17571,7 +18136,10 @@
     "pronounce": "| ik'skju:s |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "reason",
+      "pretext"
+    ],
     "type": "noun",
     "word": "excuse"
   },
@@ -17583,7 +18151,9 @@
     "pronounce": "| 'eksikju:t |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "perform"
+    ],
     "type": "verb",
     "word": "execute"
   },
@@ -17619,7 +18189,9 @@
     "pronounce": "| ig'zibit |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "demonstration"
+    ],
     "type": "noun",
     "word": "exhibit"
   },
@@ -17643,7 +18215,9 @@
     "pronounce": "| iks'pekt |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "expectant"
+    ],
     "type": "verb",
     "word": "expect"
   },
@@ -17655,7 +18229,9 @@
     "pronounce": "| iks'plein |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "annotate"
+    ],
     "type": "verb",
     "word": "explain"
   },
@@ -17823,7 +18399,9 @@
     "pronounce": "| fɔ:s |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "impose"
+    ],
     "type": "noun",
     "word": "force"
   },
@@ -18051,7 +18629,9 @@
     "pronounce": "| gɑ:d |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "secure"
+    ],
     "type": "noun",
     "word": "guard"
   },
@@ -18111,7 +18691,10 @@
     "pronounce": "| 'heziteit |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "reluctant",
+      "waver"
+    ],
     "type": "verb",
     "word": "hesitate"
   },
@@ -18183,7 +18766,9 @@
     "pronounce": "| im'pru:v |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "amend"
+    ],
     "type": "verb",
     "word": "improve"
   },
@@ -18207,7 +18792,10 @@
     "pronounce": "| in'kə: |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "sustain",
+      "endure"
+    ],
     "type": "verb",
     "word": "incur"
   },
@@ -18313,7 +18901,9 @@
       "vagueness"
     ],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "contradiction"
+    ],
     "type": "verb",
     "word": "ambiguity"
   },
@@ -18429,7 +19019,11 @@
       "require"
     ],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "contain",
+      "interfere",
+      "intervention"
+    ],
     "type": "verb",
     "word": "involve"
   },
@@ -18669,7 +19263,9 @@
     "pronounce": "| 'nærəʊ |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "diminish"
+    ],
     "type": "adj",
     "word": "narrow"
   },
@@ -18745,7 +19341,12 @@
     "pronounce": "| əb'tein |",
     "relatedForms": [],
     "spacedTime": "L4",
-    "synonyms": [],
+    "synonyms": [
+      "acquire",
+      "attain",
+      "achieve",
+      "accomplish"
+    ],
     "type": "verb",
     "word": "obtain"
   },
@@ -18757,7 +19358,9 @@
     "pronounce": "| 'ɒkjʊpai |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "conquer"
+    ],
     "type": "verb",
     "word": "occupy"
   },
@@ -18877,7 +19480,9 @@
     "pronounce": "| pɑ:'tisipeit |",
     "relatedForms": [],
     "spacedTime": "L4",
-    "synonyms": [],
+    "synonyms": [
+      "engage"
+    ],
     "type": "verb",
     "word": "participate"
   },
@@ -18901,7 +19506,9 @@
     "pronounce": "| pə'fɔ:m |",
     "relatedForms": [],
     "spacedTime": "L4",
-    "synonyms": [],
+    "synonyms": [
+      "execute"
+    ],
     "type": "verb",
     "word": "perform"
   },
@@ -18928,7 +19535,9 @@
       "supposition"
     ],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "conclude"
+    ],
     "type": "verb",
     "word": "deduce"
   },
@@ -18940,7 +19549,9 @@
     "pronounce": "| pə'sist |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "persevere"
+    ],
     "type": "verb",
     "word": "persist"
   },
@@ -18958,7 +19569,9 @@
       "plead with"
     ],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "convince"
+    ],
     "type": "verb",
     "word": "persuade"
   },
@@ -19049,7 +19662,9 @@
     "pronounce": "| pri'dikt |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "forecast"
+    ],
     "type": "verb",
     "word": "predict"
   },
@@ -19133,7 +19748,10 @@
     "pronounce": "| pri'vent |",
     "relatedForms": [],
     "spacedTime": "L4",
-    "synonyms": [],
+    "synonyms": [
+      "prohibit",
+      "intercept"
+    ],
     "type": "verb",
     "word": "prevent"
   },
@@ -19216,7 +19834,7 @@
     "meaning": "tuyên bố",
     "pronounce": "ˌdekləˈrāSH(ə)n",
     "relatedForms": [],
-    "spacedTime": "L3",
+    "spacedTime": "L4",
     "synonyms": [],
     "type": "noun",
     "word": "declaration"
@@ -19522,7 +20140,10 @@
       "weighty"
     ],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "enormous",
+      "mass"
+    ],
     "type": "adj",
     "word": "massive"
   },
@@ -19558,7 +20179,9 @@
     "pronounce": "| ri'strikt |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "confine"
+    ],
     "type": "verb",
     "word": "restrict"
   },
@@ -19754,7 +20377,9 @@
     "pronounce": "| BrE sɪˈkjʊə, sɪˈkjɔː, AmE səˈkjʊr |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "guard"
+    ],
     "type": "verb",
     "word": "secure"
   },
@@ -19934,7 +20559,9 @@
     "pronounce": "| sɔlv |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "settle"
+    ],
     "type": "verb",
     "word": "solve"
   },
@@ -20150,7 +20777,9 @@
     "pronounce": "| 'sʌfə |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "endure"
+    ],
     "type": "verb",
     "word": "suffer"
   },
@@ -20170,7 +20799,7 @@
     "example": "A senior engineer will supervise the interns.",
     "id": "94f4f8ea-661b-4053-9077-802f8d45a615",
     "level": "",
-    "meaning": "gíam sát",
+    "meaning": "giám sát",
     "pronounce": "| 'su:pəvaiz |",
     "relatedForms": [],
     "spacedTime": "L3",
@@ -20198,7 +20827,10 @@
     "pronounce": "| di'pre∫n |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "assume",
+      "depress"
+    ],
     "type": "noun",
     "word": "depression"
   },
@@ -20222,7 +20854,11 @@
     "pronounce": "| sə'stein |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "incur",
+      "endure",
+      "uphold"
+    ],
     "type": "verb",
     "word": "sustain"
   },
@@ -20390,7 +21026,9 @@
     "pronounce": "| in'∫uə |",
     "relatedForms": [],
     "spacedTime": "L4",
-    "synonyms": [],
+    "synonyms": [
+      "assure"
+    ],
     "type": "verb",
     "word": "ensure"
   },
@@ -20450,7 +21088,9 @@
     "pronounce": "ɪˈmɜːdʒ",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "occur"
+    ],
     "type": "verb",
     "word": "emerge"
   },
@@ -20520,7 +21160,9 @@
       "wipe out"
     ],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "exclude"
+    ],
     "type": "verb",
     "word": "eliminate"
   },
@@ -20664,7 +21306,9 @@
     "pronounce": "| di'stɜ:b |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "destabilize"
+    ],
     "type": "verb",
     "word": "disturb"
   },
@@ -20676,7 +21320,10 @@
     "pronounce": "| di'stribju:t |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "allocate",
+      "dispersal"
+    ],
     "type": "verb",
     "word": "distribute"
   },
@@ -20688,7 +21335,12 @@
     "pronounce": "| dis'tiηgwi∫ |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "contrary",
+      "contrast",
+      "distinction",
+      "discriminate"
+    ],
     "type": "verb",
     "word": "distinguish"
   },
@@ -20892,7 +21544,9 @@
     "pronounce": "| BrE dɪˈmɑːnd, AmE dəˈmænd |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "ask for"
+    ],
     "type": "verb",
     "word": "demand"
   },
@@ -20954,7 +21608,9 @@
       "profess"
     ],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "assert"
+    ],
     "type": "verb",
     "word": "declare"
   },
@@ -21050,7 +21706,10 @@
     "pronounce": "| kən'vins |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "persuade",
+      "raise"
+    ],
     "type": "verb",
     "word": "convince"
   },
@@ -21074,7 +21733,9 @@
     "pronounce": "| kən'vei |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "impart"
+    ],
     "type": "verb",
     "word": "convey"
   },
@@ -21086,7 +21747,10 @@
     "pronounce": "| 'kɔntræst |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "discriminate",
+      "distinguish"
+    ],
     "type": "noun",
     "word": "contrast"
   },
@@ -21122,7 +21786,9 @@
     "pronounce": "| kən'tein |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "involve"
+    ],
     "type": "verb",
     "word": "contain"
   },
@@ -21158,7 +21824,9 @@
     "pronounce": "| kən'sʌlt |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "confer"
+    ],
     "type": "verb",
     "word": "consult"
   },
@@ -21182,7 +21850,10 @@
     "pronounce": "| 'kɔnstitju:t |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "establish",
+      "compose"
+    ],
     "type": "verb",
     "word": "constitute"
   },
@@ -21256,7 +21927,10 @@
       "shut in"
     ],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "restrain",
+      "restrict"
+    ],
     "type": "verb",
     "word": "confine"
   },
@@ -21291,7 +21965,11 @@
       "present"
     ],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "grant",
+      "adviser",
+      "consult"
+    ],
     "type": "verb",
     "word": "confer"
   },
@@ -21315,7 +21993,10 @@
     "pronounce": "| kən'dem |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "concern",
+      "concern"
+    ],
     "type": "verb",
     "word": "condemn"
   },
@@ -21327,7 +22008,9 @@
     "pronounce": "| kən'klu:d |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "deduce"
+    ],
     "type": "verb",
     "word": "conclude"
   },
@@ -21339,7 +22022,9 @@
     "pronounce": "| kən'sistənt |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "coincide"
+    ],
     "type": "adj",
     "word": "consistent"
   },
@@ -21351,7 +22036,9 @@
     "pronounce": "| kən'sə:n |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "condemn"
+    ],
     "type": "noun",
     "word": "concern"
   },
@@ -21386,7 +22073,10 @@
       "think of"
     ],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "awareness",
+      "cognitive"
+    ],
     "type": "verb",
     "word": "conceive"
   },
@@ -21422,7 +22112,9 @@
     "pronounce": "| kəm'pouz |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "constitute"
+    ],
     "type": "verb",
     "word": "compose"
   },
@@ -21470,7 +22162,9 @@
     "pronounce": "| kəm'pel |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "impose"
+    ],
     "type": "verb",
     "word": "compel"
   },
@@ -21530,7 +22224,9 @@
     "pronounce": "| ,kouin'said |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "consistent"
+    ],
     "type": "verb",
     "word": "coincide"
   },
@@ -21624,9 +22320,13 @@
     "level": "",
     "meaning": "theo đuổi",
     "pronounce": "| t∫eis |",
-    "relatedForms": [],
+    "relatedForms": [
+      "follow"
+    ],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "pursuit"
+    ],
     "type": "verb",
     "word": "chase"
   },
@@ -21887,7 +22587,9 @@
       "undertake"
     ],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "proposal"
+    ],
     "type": "verb",
     "word": "bid"
   },
@@ -22016,7 +22718,10 @@
       "struggle"
     ],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "strive",
+      "effort"
+    ],
     "type": "verb",
     "word": "attempt"
   },
@@ -22028,7 +22733,11 @@
     "pronounce": "| ə'tein |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "accomplish",
+      "achieve",
+      "obtain"
+    ],
     "type": "verb",
     "word": "attain"
   },
@@ -22040,7 +22749,9 @@
     "pronounce": "| ə'∫uə, ə'∫ɔ: |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "ensure"
+    ],
     "type": "verb",
     "word": "assure"
   },
@@ -22076,7 +22787,9 @@
       "simulate"
     ],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "depression"
+    ],
     "type": "verb",
     "word": "assume"
   },
@@ -22142,7 +22855,9 @@
       "uphold"
     ],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "declare"
+    ],
     "type": "verb",
     "word": "assert"
   },
@@ -22214,7 +22929,10 @@
     "pronounce": "| ə'mend |",
     "relatedForms": [],
     "spacedTime": "",
-    "synonyms": [],
+    "synonyms": [
+      "adjustment",
+      "adjust"
+    ],
     "type": "verb",
     "word": "amend"
   },
@@ -22285,7 +23003,9 @@
     "pronounce": "| əd'mit |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "confess"
+    ],
     "type": "verb",
     "word": "Admit"
   },
@@ -22299,7 +23019,7 @@
     "spacedTime": "L3",
     "synonyms": [],
     "type": "verb",
-    "word": "Admire"
+    "word": "admire"
   },
   {
     "example": "We must adapt to changing conditions.",
@@ -22323,7 +23043,7 @@
     "spacedTime": "L3",
     "synonyms": [],
     "type": "verb",
-    "word": "Act"
+    "word": "act"
   },
   {
     "example": "She hopes to acquire new skills this year.",
@@ -22364,7 +23084,11 @@
       "realize"
     ],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "attain",
+      "obtain",
+      "accomplish"
+    ],
     "type": "verb",
     "word": "achieve"
   },
@@ -22376,7 +23100,9 @@
     "pronounce": "| ə'kju:z |",
     "relatedForms": [],
     "spacedTime": "L5",
-    "synonyms": [],
+    "synonyms": [
+      "indict"
+    ],
     "type": "verb",
     "word": "accuse"
   },
@@ -22402,7 +23128,7 @@
     "spacedTime": "L3",
     "synonyms": [],
     "type": "verb",
-    "word": "Accommodate"
+    "word": "accommodate"
   },
   {
     "example": "You can access the file online.",
@@ -22426,7 +23152,7 @@
     "spacedTime": "L3",
     "synonyms": [],
     "type": "verb",
-    "word": "Abuse"
+    "word": "abuse"
   },
   {
     "example": "The sponge will absorb the spill.",
@@ -22448,7 +23174,10 @@
     "pronounce": "| ə'bɔli∫ |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "abandon",
+      "renounce"
+    ],
     "type": "verb",
     "word": "abolish"
   },
@@ -22459,8 +23188,11 @@
     "meaning": "bỏ, từ bỏ",
     "pronounce": "| ə'bændən |",
     "relatedForms": [],
-    "spacedTime": "L3",
-    "synonyms": [],
+    "spacedTime": "L5",
+    "synonyms": [
+      "abolish",
+      "renounce"
+    ],
     "type": "verb",
     "word": "abandon"
   },
@@ -22498,7 +23230,7 @@
     "spacedTime": "L3",
     "synonyms": [],
     "type": "adj",
-    "word": "Inappropriate"
+    "word": "inappropriate"
   },
   {
     "example": "She's obsessed with vintage cars.",
@@ -22570,7 +23302,7 @@
     "spacedTime": "L3",
     "synonyms": [],
     "type": "adj",
-    "word": "Brief"
+    "word": "brief"
   },
   {
     "example": "Her popularity grew after the show.",
@@ -22591,10 +23323,10 @@
     "meaning": "động lực",
     "pronounce": "| ,mouti'vei∫n |",
     "relatedForms": [],
-    "spacedTime": "L3",
+    "spacedTime": "L4",
     "synonyms": [],
     "type": "noun",
-    "word": "Motivation"
+    "word": "motivation"
   },
   {
     "example": "Dedicate time each day to practice.",
@@ -22712,7 +23444,9 @@
     "pronounce": "| ,prezen'tei∫n |",
     "relatedForms": [],
     "spacedTime": "L1",
-    "synonyms": [],
+    "synonyms": [
+      "lecture"
+    ],
     "type": "noun",
     "word": "presentation"
   },
@@ -22760,9 +23494,11 @@
     "pronounce": "| 'lekt∫ə |",
     "relatedForms": [],
     "spacedTime": "L3",
-    "synonyms": [],
+    "synonyms": [
+      "presentation"
+    ],
     "type": "noun",
-    "word": "Lecture"
+    "word": "lecture"
   },
   {
     "example": "Attendance is compulsory for all students.",
@@ -22774,7 +23510,7 @@
     "spacedTime": "L3",
     "synonyms": [],
     "type": "adj",
-    "word": "Compulsory"
+    "word": "compulsory"
   },
   {
     "example": "She graduated with distinction.",
@@ -22784,7 +23520,11 @@
     "pronounce": "| dis'tiηk∫n |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "discriminate",
+      "distinguish",
+      "discrepancy"
+    ],
     "type": "noun",
     "word": "distinction"
   },
@@ -22798,7 +23538,7 @@
     "spacedTime": "L3",
     "synonyms": [],
     "type": "adj",
-    "word": "Exceptional"
+    "word": "exceptional"
   },
   {
     "example": "She is keen to learn new skills.",
@@ -22914,7 +23654,9 @@
     "pronounce": "| 'setl |",
     "relatedForms": [],
     "spacedTime": "L2",
-    "synonyms": [],
+    "synonyms": [
+      "solve"
+    ],
     "type": "noun",
     "word": "settle"
   },

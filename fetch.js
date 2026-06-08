@@ -126,6 +126,7 @@ async function queryDatabase(token, databaseID, startCursor = null) {
 
 async function fetchAllEntries(token, databaseID, onlyMissingExample = false) {
   const entries = [];
+  const allRelationIds = new Set();
   let nextCursor = null;
   let pageIndex = 0;
 
@@ -134,7 +135,16 @@ async function fetchAllEntries(token, databaseID, onlyMissingExample = false) {
     pageIndex++;
 
     const pageRows = response.results
-      .map(makeExampleEntry)
+      .map((page) => {
+        const entry = makeExampleEntry(page);
+        // Collect IDs from relation-type synonyms for later resolution
+        if (entry._synonymRelationIds) {
+          for (const id of entry._synonymRelationIds) {
+            allRelationIds.add(id);
+          }
+        }
+        return entry;
+      })
       .filter((e) => e.word.trim() !== "");
 
     const kept = onlyMissingExample
@@ -148,6 +158,26 @@ async function fetchAllEntries(token, databaseID, onlyMissingExample = false) {
       `[Page ${pageIndex}] Notion returned ${response.results.length} → kept ${kept.length} (total: ${entries.length}, hasMore: ${response.has_more})`
     );
   } while (nextCursor);
+
+  // Resolve relation-type synonym page IDs to actual page titles
+  if (allRelationIds.size > 0) {
+    console.log(
+      `Resolving ${allRelationIds.size} related page title(s) for synonyms...`
+    );
+    const titleMap = await resolvePageTitles(token, [...allRelationIds]);
+    console.log(`Resolved ${Object.keys(titleMap).length} title(s).`);
+
+    for (const entry of entries) {
+      if (entry._synonymRelationIds) {
+        entry.synonyms = entry._synonymRelationIds
+          .map((id) => titleMap[id])
+          .filter(
+            (title) => typeof title === "string" && title.length > 0
+          );
+        delete entry._synonymRelationIds;
+      }
+    }
+  }
 
   return entries;
 }
@@ -216,6 +246,13 @@ function extractSpacedTime(prop) {
 
 function extractSynonyms(prop) {
   if (!prop) return [];
+
+  // Handle relation type (related page) — returns page IDs
+  // resolved to page titles later in fetchAllEntries
+  if (prop.type === "relation" && Array.isArray(prop.relation)) {
+    return prop.relation.map((r) => r.id).filter(Boolean);
+  }
+
   const names = extractMultiSelectNames(prop.multi_select);
   if (names) return names;
   if (Array.isArray(prop.rich_text)) {
@@ -238,8 +275,63 @@ function extractRelatedForms(prop) {
     .filter((s) => s.length > 0);
 }
 
+async function resolvePageTitles(token, pageIds) {
+  /** Batch-fetch Notion pages by ID and return a map of id → title. */
+  const titleMap = {};
+  const batchSize = 3;
+
+  for (let i = 0; i < pageIds.length; i += batchSize) {
+    const batch = pageIds.slice(i, i + batchSize);
+    const results = await Promise.all(
+      batch.map(async (id) => {
+        try {
+          const res = await fetch(`https://api.notion.com/v1/pages/${id}`, {
+            headers: {
+              Authorization: `Bearer ${token}`,
+              "Notion-Version": "2022-06-28",
+            },
+          });
+          if (!res.ok) return null;
+          const page = await res.json();
+          const props = page.properties ?? {};
+          const titleProp = Object.values(props).find(
+            (p) => p.type === "title"
+          );
+          if (titleProp?.title) {
+            const title = titleProp.title
+              .map((t) => t.plain_text)
+              .join("")
+              .trim();
+            return { id, title: title || "(untitled)" };
+          }
+          return { id, title: "(untitled)" };
+        } catch {
+          return null;
+        }
+      })
+    );
+    for (const r of results) {
+      if (r) titleMap[r.id] = r.title;
+    }
+    // Respect Notion rate-limit (~3 req/s)
+    if (i + batchSize < pageIds.length) {
+      await new Promise((r) => setTimeout(r, 350));
+    }
+  }
+
+  return titleMap;
+}
+
 function makeExampleEntry(page) {
   const props = page.properties ?? {};
+  const synonyms = extractSynonyms(props["Synonyms"]);
+
+  // Mark entries with relation-type synonyms so fetchAllEntries
+  // can resolve the page IDs to actual page titles later.
+  const synProp = props["Synonyms"];
+  const isRelation =
+    synProp?.type === "relation" && Array.isArray(synonyms) && synonyms.length > 0;
+
   return {
     id: page.id,
     word: extractWord(props["Word"]),
@@ -250,9 +342,10 @@ function makeExampleEntry(page) {
     spacedTime: extractSpacedTime(props["Spaced Time"]),
     level:
       extractSelectName(props["Level"]) ?? extractPlainText(props["Level"]),
-    synonyms: extractSynonyms(props["Synonyms"]),
+    synonyms,
     example: extractPlainText(props["Example"]),
     relatedForms: extractRelatedForms(props["Related forms"]),
+    ...(isRelation ? { _synonymRelationIds: synonyms } : {}),
   };
 }
 
