@@ -204,9 +204,14 @@ function MetadataPanel({ word }: { word: WordEntry | null }) {
       paddingLeft: 1,
       paddingRight: 1,
     }}>
-      <box style={{ flexDirection: "column", marginBottom: 1, paddingTop: 1 }}>
-        <box style={{ flexDirection: "row", alignItems: "center", gap: 1 }}>
-          <text fg="#f1eced" attributes={TextAttributes.BOLD}>{word.word}</text>
+      <box style={{
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        paddingTop: 1,
+      }}>
+        <text fg="#ffffff" attributes={TextAttributes.BOLD}>{word.word}</text>
+        <box style={{ flexDirection: "row", alignItems: "center", gap: 1, marginTop: 1 }}>
           <text fg="#656363">·</text>
           <text fg="#bb9af7">{word.type}</text>
         </box>
@@ -221,7 +226,6 @@ function MetadataPanel({ word }: { word: WordEntry | null }) {
         borderColor: "#2a2525",
         paddingLeft: 1,
         paddingRight: 1,
-        marginBottom: 1,
       }}>
         <text fg="#8a8585" attributes={TextAttributes.BOLD}>Meaning</text>
         <text fg="#9ece6a" attributes={TextAttributes.BOLD}>{word.meaning}</text>
@@ -233,13 +237,12 @@ function MetadataPanel({ word }: { word: WordEntry | null }) {
         borderColor: "#2a2525",
         paddingLeft: 1,
         paddingRight: 1,
-        marginBottom: 1,
       }}>
         <text fg="#8a8585" attributes={TextAttributes.BOLD}>Example</text>
         <text fg="#cfc3c3" attributes={TextAttributes.ITALIC}>{word.example || "—"}</text>
       </box>
 
-      <box style={{ flexDirection: "row", gap: 2, marginBottom: 1 }}>
+      <box style={{ flexDirection: "row", gap: 1 }}>
         <box style={{
           flexDirection: "column",
           borderStyle: "single",
@@ -270,7 +273,6 @@ function MetadataPanel({ word }: { word: WordEntry | null }) {
         borderColor: "#2a2525",
         paddingLeft: 1,
         paddingRight: 1,
-        marginBottom: 1,
       }}>
         <text fg="#8a8585" attributes={TextAttributes.BOLD}>Synonyms</text>
         {word.synonyms.length > 0
