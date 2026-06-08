@@ -1,7 +1,7 @@
 import { createCliRenderer, TextAttributes } from "@opentui/core"
 import { createRoot, useKeyboard, useTerminalDimensions } from "@opentui/react"
 import { createContext, useContext, useEffect, useMemo, useRef, useState } from "react"
-import WORDS from "../data.json"
+import rawWords from "../data.json"
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -17,6 +17,8 @@ type WordEntry = {
   synonyms: string[]
   relatedForms: string[]
 }
+
+const WORDS = rawWords as WordEntry[]
 
 // ─── Mode Context ──────────────────────────────────────────────────────────────
 
@@ -50,26 +52,26 @@ function Header() {
         paddingRight: 1,
         backgroundColor: transparent ? "transparent" : "#1a1717",
         borderStyle: "single",
-        borderColor: transparent ? "transparent" : "#2a2525",
+        borderColor: "#2a2525",
       }}
     >
       <box style={{ flexDirection: "row", alignItems: "center", gap: 1 }}>
         <text attributes={TextAttributes.BOLD} fg="#f1eced">vocab</text>
         <text fg="#656363">│</text>
         {mode === "guess" ? (
-          <text fg="#e0af68" attributes={TextAttributes.BOLD}>⍰ chế độ đoán</text>
+          <text fg="#e0af68" attributes={TextAttributes.BOLD}>⍰ guess mode</text>
         ) : (
-          <text fg="#cfc3c3">từ điển cá nhân</text>
+          <text fg="#cfc3c3">personal dictionary</text>
         )}
         <text fg="#656363">·</text>
-        <text fg="#8a8585">{WORDS.length} từ</text>
+        <text fg="#8a8585">{WORDS.length} words</text>
       </box>
       <box style={{ flexDirection: "row", gap: 2 }}>
         <text fg={transparent ? "#7aa2f7" : "#9ece6a"}>
-          {transparent ? "◐ trong suốt" : "● sẵn sàng"}
+          {transparent ? "◐ transparent" : "● ready"}
         </text>
         <text fg="#656363">│</text>
-        <text fg="#8a8585">[ctrl+c] thoát</text>
+        <text fg="#8a8585">[ctrl+c] quit</text>
       </box>
     </box>
   )
@@ -78,7 +80,7 @@ function Header() {
 // ─── Search + Level Filter ─────────────────────────────────────────────────────
 
 const LEVELS = [
-  { key: "", label: "Mới", color: "#656363" },
+  { key: "", label: "New", color: "#656363" },
   { key: "L1", label: "L1", color: "#f7768e" },
   { key: "L2", label: "L2", color: "#e0af68" },
   { key: "L3", label: "L3", color: "#7aa2f7" },
@@ -90,11 +92,11 @@ function SearchBar({ value, resultCount }: { value: string; resultCount: number 
   const { transparent } = useTheme()
   return (
     <box
-      title=" tìm kiếm "
+      title=" search "
       style={{
         flexDirection: "column",
         borderStyle: "single",
-        borderColor: transparent ? "transparent" : (value.length > 0 ? "#7aa2f7" : "#2a2525"),
+        borderColor: value.length > 0 ? "#7aa2f7" : "#2a2525",
         backgroundColor: transparent ? "transparent" : "#1a1717",
         paddingLeft: 1,
         paddingRight: 1,
@@ -104,9 +106,9 @@ function SearchBar({ value, resultCount }: { value: string; resultCount: number 
       <box style={{ flexDirection: "row", alignItems: "center", gap: 1 }}>
         <text fg="#7aa2f7" attributes={TextAttributes.BOLD}>⌕</text>
         <text fg={value.length > 0 ? "#f1eced" : "#4a4545"}>
-          {value.length > 0 ? value : "gõ để tìm ..."}
+          {value.length > 0 ? value : "type to search ..."}
         </text>
-        <text fg="#656363">{resultCount > 0 ? `${resultCount} kết quả` : ""}</text>
+        <text fg="#656363">{resultCount > 0 ? `${resultCount} results` : ""}</text>
       </box>
     </box>
   )
@@ -120,7 +122,7 @@ function LevelFilter({ selected, counts }: { selected: string; counts: Record<st
       style={{
         flexDirection: "row",
         borderStyle: "single",
-        borderColor: transparent ? "transparent" : "#2a2525",
+        borderColor: "#2a2525",
         backgroundColor: transparent ? "transparent" : "#1a1717",
         paddingLeft: 1,
         paddingRight: 1,
@@ -144,7 +146,7 @@ function LevelFilter({ selected, counts }: { selected: string; counts: Record<st
         )
       })}
       <text fg="#656363">│</text>
-      <text fg="#8a8585">[← →] mức  [↑ ↓] từ  [enter] xem</text>
+      <text fg="#8a8585">[← →] level  [↑ ↓] word  [enter] view</text>
     </box>
   )
 }
@@ -167,7 +169,7 @@ function SpacedBadge({ spacedTime }: { spacedTime: string }) {
     L3: "#7aa2f7", L4: "#9ece6a", L5: "#bb9af7",
   }
   const color = colorMap[spacedTime] || "#656363"
-  return <text fg={color} attributes={TextAttributes.BOLD}>{spacedTime || "Mới"}</text>
+  return <text fg={color} attributes={TextAttributes.BOLD}>{spacedTime || "New"}</text>
 }
 
 function MetadataPanel({ word }: { word: WordEntry | null }) {
@@ -175,12 +177,12 @@ function MetadataPanel({ word }: { word: WordEntry | null }) {
   if (!word) {
     return (
       <box
-        title="chi tiết"
+        title="details"
         style={{
           flexGrow: 1,
           flexDirection: "column",
           borderStyle: "single",
-          borderColor: transparent ? "transparent" : "#2a2525",
+          borderColor: "#2a2525",
           backgroundColor: transparent ? "transparent" : "#141111",
           paddingLeft: 1,
           paddingRight: 1,
@@ -188,16 +190,16 @@ function MetadataPanel({ word }: { word: WordEntry | null }) {
           justifyContent: "center",
         }}
       >
-        <text fg="#4a4545" attributes={TextAttributes.DIM}>── chọn một từ để xem chi tiết ──</text>
+        <text fg="#4a4545" attributes={TextAttributes.DIM}>── select a word to view details ──</text>
       </box>)
   }
 
   return (
-    <box title="chi tiết" style={{
+    <box title="details" style={{
       flexGrow: 1,
       flexDirection: "column",
       borderStyle: "single",
-      borderColor: transparent ? "transparent" : "#7aa2f7",
+      borderColor: "#7aa2f7",
       backgroundColor: transparent ? "transparent" : "#141111",
       paddingLeft: 1,
       paddingRight: 1,
@@ -216,24 +218,24 @@ function MetadataPanel({ word }: { word: WordEntry | null }) {
       <box style={{
         flexDirection: "column",
         borderStyle: "single",
-        borderColor: transparent ? "transparent" : "#2a2525",
+        borderColor: "#2a2525",
         paddingLeft: 1,
         paddingRight: 1,
         marginBottom: 1,
       }}>
-        <text fg="#8a8585" attributes={TextAttributes.BOLD}>Nghĩa</text>
+        <text fg="#8a8585" attributes={TextAttributes.BOLD}>Meaning</text>
         <text fg="#9ece6a" attributes={TextAttributes.BOLD}>{word.meaning}</text>
       </box>
 
       <box style={{
         flexDirection: "column",
         borderStyle: "single",
-        borderColor: transparent ? "transparent" : "#2a2525",
+        borderColor: "#2a2525",
         paddingLeft: 1,
         paddingRight: 1,
         marginBottom: 1,
       }}>
-        <text fg="#8a8585" attributes={TextAttributes.BOLD}>Ví dụ</text>
+        <text fg="#8a8585" attributes={TextAttributes.BOLD}>Example</text>
         <text fg="#cfc3c3" attributes={TextAttributes.ITALIC}>{word.example || "—"}</text>
       </box>
 
@@ -241,18 +243,18 @@ function MetadataPanel({ word }: { word: WordEntry | null }) {
         <box style={{
           flexDirection: "column",
           borderStyle: "single",
-          borderColor: transparent ? "transparent" : "#2a2525",
+          borderColor: "#2a2525",
           paddingLeft: 1,
           paddingRight: 1,
           flexGrow: 1,
         }}>
-          <text fg="#8a8585" attributes={TextAttributes.BOLD}>Cấp độ</text>
+          <text fg="#8a8585" attributes={TextAttributes.BOLD}>Level</text>
           <LevelBadge level={word.level} />
         </box>
         <box style={{
           flexDirection: "column",
           borderStyle: "single",
-          borderColor: transparent ? "transparent" : "#2a2525",
+          borderColor: "#2a2525",
           paddingLeft: 1,
           paddingRight: 1,
           flexGrow: 1,
@@ -265,12 +267,12 @@ function MetadataPanel({ word }: { word: WordEntry | null }) {
       <box style={{
         flexDirection: "column",
         borderStyle: "single",
-        borderColor: transparent ? "transparent" : "#2a2525",
+        borderColor: "#2a2525",
         paddingLeft: 1,
         paddingRight: 1,
         marginBottom: 1,
       }}>
-        <text fg="#8a8585" attributes={TextAttributes.BOLD}>Đồng nghĩa</text>
+        <text fg="#8a8585" attributes={TextAttributes.BOLD}>Synonyms</text>
         {word.synonyms.length > 0
           ? <text fg="#e0af68">{word.synonyms.join(", ")}</text>
           : <text fg="#4a4545" attributes={TextAttributes.DIM}>—</text>}
@@ -279,11 +281,11 @@ function MetadataPanel({ word }: { word: WordEntry | null }) {
       <box style={{
         flexDirection: "column",
         borderStyle: "single",
-        borderColor: transparent ? "transparent" : "#2a2525",
+        borderColor: "#2a2525",
         paddingLeft: 1,
         paddingRight: 1,
       }}>
-        <text fg="#8a8585" attributes={TextAttributes.BOLD}>Biến thể</text>
+        <text fg="#8a8585" attributes={TextAttributes.BOLD}>Variants</text>
         {word.relatedForms.length > 0
           ? <text fg="#7aa2f7">{word.relatedForms.join(", ")}</text>
           : <text fg="#4a4545" attributes={TextAttributes.DIM}>—</text>}
@@ -304,19 +306,20 @@ function ResultsPanel({
   const scrollRef = useRef<any>(null)
 
   useEffect(() => {
-    if (selectedIdx >= 0 && words[selectedIdx]) {
-      scrollRef.current?.scrollChildIntoView?.("word-" + words[selectedIdx].id)
+    const selectedWord = words[selectedIdx]
+    if (selectedIdx >= 0 && selectedWord) {
+      scrollRef.current?.scrollChildIntoView?.("word-" + selectedWord.id)
     }
   }, [selectedIdx, words])
 
   return (
     <box
-      title={` từ (${words.length}) `}
+      title={` words (${words.length}) `}
       style={{
         width: 38,
         flexDirection: "column",
         borderStyle: "single",
-        borderColor: transparent ? "transparent" : "#2a2525",
+        borderColor: "#2a2525",
         backgroundColor: transparent ? "transparent" : "#0f0d0d",
       }}
     >
@@ -333,7 +336,7 @@ function ResultsPanel({
       >
         {words.length === 0 ? (
           <box style={{ flexDirection: "column", alignItems: "center", paddingTop: 2 }}>
-            <text fg="#4a4545" attributes={TextAttributes.DIM}>── không có từ ──</text>
+            <text fg="#4a4545" attributes={TextAttributes.DIM}>── no words ──</text>
           </box>
         ) : (
           words.map((w, i) => (
@@ -387,7 +390,7 @@ function StatusBar({ selected, total }: { selected: WordEntry | null; total: num
         paddingRight: 1,
         backgroundColor: transparent ? "transparent" : "#1a1717",
         borderStyle: "single",
-        borderColor: transparent ? "transparent" : "#2a2525",
+        borderColor: "#2a2525",
       }}
     >
       <box style={{ flexDirection: "row", gap: 2 }}>
@@ -398,19 +401,19 @@ function StatusBar({ selected, total }: { selected: WordEntry | null; total: num
             <text fg="#cfc3c3">{selected.meaning}</text>
           </>
         ) : (
-          <text fg="#656363" attributes={TextAttributes.DIM}>── không có từ nào được chọn ──</text>
+          <text fg="#656363" attributes={TextAttributes.DIM}>── no word selected ──</text>
         )}
       </box>
       <box style={{ flexDirection: "row", gap: 2 }}>
-        <text fg="#8a8585">{total} từ</text>
+        <text fg="#8a8585">{total} words</text>
         <text fg="#656363">│</text>
-        <text fg="#8a8585">[← →] mức  [↑ ↓] từ  [enter] xem</text>
+        <text fg="#8a8585">[← →] level  [↑ ↓] word  [enter] view</text>
         <text fg="#656363">│</text>
-        <text fg="#8a8585">[ctrl+g] đoán</text>
+        <text fg="#8a8585">[ctrl+g] guess</text>
         <text fg="#656363">│</text>
-        <text fg="#8a8585">[ctrl+t] trong suốt</text>
+        <text fg="#8a8585">[ctrl+t] transparent</text>
         <text fg="#656363">│</text>
-        <text fg="#8a8585">[ctrl+c] thoát</text>
+        <text fg="#8a8585">[ctrl+c] quit</text>
       </box>
     </box>
   )
@@ -473,13 +476,13 @@ function GuessMode({
     if (key.name === "left") {
       const idx = LEVELS.findIndex((l) => l.key === selectedLevel)
       const prev = idx > 0 ? idx - 1 : LEVELS.length - 1
-      onLevelChange(LEVELS[prev].key)
+      onLevelChange(LEVELS[prev]?.key ?? "")
       return
     }
     if (key.name === "right") {
       const idx = LEVELS.findIndex((l) => l.key === selectedLevel)
       const next = idx < LEVELS.length - 1 ? idx + 1 : 0
-      onLevelChange(LEVELS[next].key)
+      onLevelChange(LEVELS[next]?.key ?? "")
       return
     }
     if (key.name === "backspace") {
@@ -492,7 +495,9 @@ function GuessMode({
         setGuess("")
         setResult("idle")
       } else {
-        setResult(guess.trim().toLowerCase() === word?.word.toLowerCase() ? "correct" : "wrong")
+        setResult(
+          guess.trim().toLowerCase() === (word?.word ?? "").toLowerCase() ? "correct" : "wrong"
+        )
       }
       return
     }
@@ -515,7 +520,7 @@ function GuessMode({
       <box title=" spaced time " style={{
         flexDirection: "row",
         borderStyle: "single",
-        borderColor: transparent ? "transparent" : "#2a2525",
+        borderColor: "#2a2525",
         backgroundColor: transparent ? "transparent" : "#1a1717",
         paddingLeft: 1,
         paddingRight: 1,
@@ -538,7 +543,7 @@ function GuessMode({
           )
         })}
         <text fg="#656363">│</text>
-        <text fg="#8a8585">[← →] mức  [↑ ↓] từ  [enter] kiểm tra  [ctrl+g] thoát</text>
+        <text fg="#8a8585">[← →] level  [↑ ↓] word  [enter] check  [ctrl+g] quit</text>
       </box>
 
       <box style={{
@@ -559,18 +564,18 @@ function GuessMode({
           width: 60,
         }}>
           <box style={{ flexDirection: "column", alignItems: "center", marginBottom: 1 }}>
-            <text fg="#8a8585" attributes={TextAttributes.BOLD}>Nghĩa</text>
+            <text fg="#8a8585" attributes={TextAttributes.BOLD}>Meaning</text>
             <text fg="#9ece6a" attributes={TextAttributes.BOLD}>{word.meaning}</text>
           </box>
 
           <box style={{ flexDirection: "column", alignItems: "center", marginBottom: 1 }}>
-            <text fg="#8a8585" attributes={TextAttributes.BOLD}>Từ</text>
+            <text fg="#8a8585" attributes={TextAttributes.BOLD}>Word</text>
             <text fg="#f1eced" attributes={TextAttributes.BOLD}>{maskWord(word.word)}</text>
           </box>
 
           {word.type && (
             <box style={{ flexDirection: "column", alignItems: "center", marginBottom: 1 }}>
-              <text fg="#8a8585" attributes={TextAttributes.BOLD}>Loại</text>
+              <text fg="#8a8585" attributes={TextAttributes.BOLD}>Type</text>
               <text fg="#bb9af7" attributes={TextAttributes.BOLD}>{word.type}</text>
             </box>
           )}
@@ -585,24 +590,24 @@ function GuessMode({
           }}>
             <text fg="#656363">›</text>
             <text fg={guess.length > 0 ? "#f1eced" : "#4a4545"}>
-              {guess.length > 0 ? guess : "gõ từ tiếng Anh ..."}
+              {guess.length > 0 ? guess : "type the English word ..."}
             </text>
           </box>
 
           {result === "correct" && (
             <box style={{ flexDirection: "row", justifyContent: "center" }}>
-              <text fg="#9ece6a" attributes={TextAttributes.BOLD}>✓ Đúng!</text>
+              <text fg="#9ece6a" attributes={TextAttributes.BOLD}>✓ Correct!</text>
             </box>
           )}
           {result === "wrong" && (
             <box style={{ flexDirection: "column", alignItems: "center" }}>
-              <text fg="#f7768e" attributes={TextAttributes.BOLD}>✗ Sai</text>
+              <text fg="#f7768e" attributes={TextAttributes.BOLD}>✗ Wrong</text>
               <text fg="#e0af68">→ {word.word}</text>
             </box>
           )}
 
           <box style={{ flexDirection: "row", justifyContent: "center", marginTop: 1 }}>
-            <text fg="#656363">[← →] mức  [↑ ↓] chọn  [enter] kiểm tra  [ctrl+g] thoát</text>
+            <text fg="#656363">[← →] level  [↑ ↓] select  [enter] check  [ctrl+g] quit</text>
           </box>
         </box>
       </box>
@@ -613,7 +618,7 @@ function GuessMode({
 // ─── App Root ─────────────────────────────────────────────────────────────────
 
 function App() {
-  const {width, height} = useTerminalDimensions()
+  const { width, height } = useTerminalDimensions()
   const [transparent, setTransparent] = useState(false)
   const [mode, setMode] = useState<"browse" | "guess">("browse")
   const [query, setQuery] = useState("")
@@ -627,10 +632,10 @@ function App() {
     const q = query.toLowerCase()
     return byLevel.filter(
       (w) =>
-        w.word.toLowerCase().includes(q) ||
-        w.meaning.toLowerCase().includes(q) ||
-        w.synonyms.some((s) => s.toLowerCase().includes(q)) ||
-        w.relatedForms.some((r) => r.toLowerCase().includes(q))
+        String(w.word).toLowerCase().includes(q) ||
+        String(w.meaning).toLowerCase().includes(q) ||
+        w.synonyms.some((s) => String(s).toLowerCase().includes(q)) ||
+        w.relatedForms.some((r) => String(r).toLowerCase().includes(q))
     )
   }, [selectedLevel, query])
 
@@ -648,6 +653,7 @@ function App() {
 
   useKeyboard((key) => {
     if (key.ctrl && key.name === "c") {
+      renderer.destroy()
       process.exit(0)
     }
 
@@ -689,7 +695,7 @@ function App() {
     if (key.name === "left") {
       const idx = LEVELS.findIndex((l) => l.key === selectedLevel)
       const prev = idx > 0 ? idx - 1 : LEVELS.length - 1
-      setSelectedLevel(LEVELS[prev].key)
+      setSelectedLevel(LEVELS[prev]?.key ?? "")
       setSelectedIdx(0)
       return
     }
@@ -697,7 +703,7 @@ function App() {
     if (key.name === "right") {
       const idx = LEVELS.findIndex((l) => l.key === selectedLevel)
       const next = idx < LEVELS.length - 1 ? idx + 1 : 0
-      setSelectedLevel(LEVELS[next].key)
+      setSelectedLevel(LEVELS[next]?.key ?? "")
       setSelectedIdx(0)
       return
     }
@@ -705,7 +711,7 @@ function App() {
     if (key.name === "tab" && !key.shift) {
       const idx = LEVELS.findIndex((l) => l.key === selectedLevel)
       const next = idx < LEVELS.length - 1 ? idx + 1 : 0
-      setSelectedLevel(LEVELS[next].key)
+      setSelectedLevel(LEVELS[next]?.key ?? "")
       setSelectedIdx(0)
       return
     }
@@ -713,7 +719,7 @@ function App() {
     if (key.name === "tab" && key.shift) {
       const idx = LEVELS.findIndex((l) => l.key === selectedLevel)
       const prev = idx > 0 ? idx - 1 : LEVELS.length - 1
-      setSelectedLevel(LEVELS[prev].key)
+      setSelectedLevel(LEVELS[prev]?.key ?? "")
       setSelectedIdx(0)
       return
     }
@@ -791,4 +797,11 @@ function App() {
 }
 
 const renderer = await createCliRenderer({ exitOnCtrlC: false })
+process.on("SIGINT", () => {
+  renderer.destroy()
+  process.exit(0)
+})
+process.on("exit", () => {
+  renderer.destroy()
+})
 createRoot(renderer).render(<App />)

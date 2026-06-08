@@ -20,6 +20,8 @@ import path from "path";
 // Environment helpers
 // ---------------------------------------------------------------------------
 
+const outputFileDefault = "./data.json";
+
 function loadEnvFile(filePath = ".env") {
   const env = {};
   if (!fs.existsSync(filePath)) return env;
@@ -90,7 +92,7 @@ function loadConfig(args) {
       fileEnv,
       processEnv
     ) ??
-    "./examples.json";
+    outputFileDefault;
 
   return { notionToken, notionDatabaseID, outputFile };
 }

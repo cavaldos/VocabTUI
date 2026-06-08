@@ -4,10 +4,12 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "bun run --watch src/index.tsx"
+    "dev": "bun run --watch src/index.tsx",
+    "down": "node fetch.js"
   },
   "devDependencies": {
     "@types/bun": "latest",
+    "@types/node": "^25.9.2",
     "@types/react": "^19.2.16"
   },
   "peerDependencies": {
