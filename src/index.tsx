@@ -1,6 +1,8 @@
 import { createCliRenderer, TextAttributes } from "@opentui/core"
 import { createRoot, useKeyboard, useTerminalDimensions } from "@opentui/react"
-import { createContext, useContext, useEffect, useMemo, useRef, useState } from "react"
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react"
+import fs from "node:fs"
+import path from "node:path"
 import rawWords from "../data.json"
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -17,8 +19,6 @@ type WordEntry = {
   synonyms: string[]
   relatedForms: string[]
 }
-
-const WORDS = rawWords as WordEntry[]
 
 // ─── Mode Context ──────────────────────────────────────────────────────────────
 
@@ -38,7 +38,7 @@ function useTheme() {
 
 // ─── Header ───────────────────────────────────────────────────────────────────
 
-function Header() {
+function Header({ wordCount, isFetching, fetchError }: { wordCount: number; isFetching: boolean; fetchError: string | null }) {
   const { transparent } = useTheme()
   const mode = useAppMode()
   return (
@@ -64,12 +64,24 @@ function Header() {
           <text fg="#cfc3c3">personal dictionary</text>
         )}
         <text fg="#656363">·</text>
-        <text fg="#8a8585">{WORDS.length} words</text>
+        <text fg="#8a8585">{wordCount} words</text>
       </box>
       <box style={{ flexDirection: "row", gap: 2 }}>
-        <text fg={transparent ? "#7aa2f7" : "#9ece6a"}>
-          {transparent ? "◐ transparent" : "● ready"}
+        <text fg={isFetching ? "#e0af68" : transparent ? "#7aa2f7" : "#9ece6a"} attributes={isFetching ? TextAttributes.BOLD : TextAttributes.NONE}>
+          {isFetching ? "⟳ syncing..." : transparent ? "◐ transparent" : "● ready"}
         </text>
+        {!isFetching && !fetchError && (
+          <>
+            <text fg="#656363">│</text>
+            <text fg="#8a8585">[ctrl+d] sync</text>
+          </>
+        )}
+        {!isFetching && fetchError && (
+          <>
+            <text fg="#656363">│</text>
+            <text fg="#f7768e" attributes={TextAttributes.DIM}>✗ sync error</text>
+          </>
+        )}
         <text fg="#656363">│</text>
         <text fg="#8a8585">[ctrl+c] quit</text>
       </box>
@@ -356,6 +368,9 @@ function ResultsPanel({
             >
               <box style={{ flexDirection: "column" }}>
                 <box style={{ flexDirection: "row", gap: 1 }}>
+                  <text fg="#4a4545" attributes={TextAttributes.DIM}>
+                    {String(i + 1).padStart(3, " ")}
+                  </text>
                   <text
                     fg={i === selectedIdx ? "#f1eced" : "#cfc3c3"}
                     attributes={i === selectedIdx ? TextAttributes.BOLD : TextAttributes.NONE}
@@ -821,30 +836,68 @@ function App() {
   const [levelPositions, setLevelPositions] = useState<Record<string, number>>({})
   const selectedIdx = levelPositions[selectedLevel] ?? 0
   const [viewedWord, setViewedWord] = useState<WordEntry | null>(null)
+  const [allWords, setAllWords] = useState<WordEntry[]>(rawWords as WordEntry[])
+  const [isFetching, setIsFetching] = useState(false)
+  const [fetchError, setFetchError] = useState<string | null>(null)
+
+  const handleFetchData = useCallback(async () => {
+    if (isFetching) return
+    setIsFetching(true)
+    setFetchError(null)
+    try {
+      const dataPath = path.join(process.cwd(), "data.json")
+
+      // Use Bun.spawn — native, no buffer issues, reliable timeout
+      const proc = Bun.spawn(["bun", "run", "fetch.js"], {
+        cwd: process.cwd(),
+        stdio: ["inherit", "pipe", "pipe"],
+        env: { ...process.env },
+        timeout: 120000,
+      })
+
+      const exitCode = await proc.exited
+
+      if (exitCode === null || exitCode !== 0) {
+        const stderr = await new Response(proc.stderr).text()
+        throw new Error(stderr?.trim() || (exitCode === null ? "Process timed out" : `Exit code ${exitCode}`))
+      }
+
+      // Reload data from the updated file
+      const raw = fs.readFileSync(dataPath, "utf-8")
+      const newData = JSON.parse(raw) as WordEntry[]
+      setAllWords(newData)
+      setLevelPositions({}) // reset positions after data refresh
+    } catch (err: any) {
+      setFetchError(err.message)
+      console.error("[fetch error]", err.message)
+    } finally {
+      setIsFetching(false)
+    }
+  }, [isFetching])
 
   const words = useMemo(() => {
     if (!query.trim()) {
       // No search: filter by spaced time level
-      return WORDS.filter((w) => w.spacedTime === selectedLevel)
+      return allWords.filter((w) => w.spacedTime === selectedLevel)
     }
     const q = query.toLowerCase()
     // Search across ALL words regardless of level
-    return WORDS.filter(
+    return allWords.filter(
       (w) =>
         String(w.word).toLowerCase().includes(q) ||
         String(w.meaning).toLowerCase().includes(q) ||
         w.synonyms.some((s) => String(s).toLowerCase().includes(q)) ||
         w.relatedForms.some((r) => String(r).toLowerCase().includes(q))
     )
-  }, [selectedLevel, query])
+  }, [selectedLevel, query, allWords])
 
   const levelCounts = useMemo(() => {
     const counts: Record<string, number> = {}
     for (const level of LEVELS) {
-      counts[level.key] = WORDS.filter((w) => w.spacedTime === level.key).length
+      counts[level.key] = allWords.filter((w) => w.spacedTime === level.key).length
     }
     return counts
-  }, [])
+  }, [allWords])
 
   const selectWord = (w: WordEntry) => {
     setViewedWord(w)
@@ -864,6 +917,11 @@ function App() {
     if (key.ctrl && key.name === "g") {
       if (mode === "guess") return
       setMode("guess")
+      return
+    }
+
+    if (key.ctrl && key.name === "d") {
+      handleFetchData()
       return
     }
 
@@ -950,7 +1008,7 @@ function App() {
             backgroundColor: transparent ? "transparent" : "#0a0808",
           }}
         >
-          <Header />
+          <Header wordCount={allWords.length} isFetching={isFetching} fetchError={fetchError} />
           {mode === "guess" ? (
             <box style={{ flexDirection: "column", flexGrow: 1, height: contentHeight, width }}>
               <GuessMode
@@ -999,7 +1057,7 @@ function App() {
               setSelectedLevel(LEVELS[next]?.key ?? "")
             }}
           />
-          <StatusBar selected={previewWord} total={WORDS.length} />
+          <StatusBar selected={previewWord} total={allWords.length} />
         </box>
       </ModeContext.Provider>
     </ThemeContext.Provider>
