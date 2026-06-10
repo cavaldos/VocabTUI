@@ -511,6 +511,16 @@ function FilledWordDisplay({
   return <box style={{ flexDirection: "row" }}>{children}</box>
 }
 
+// ─── Mask word in example ────────────────────────────────────────────
+
+function maskWordInExample(example: string, word: string): string {
+  if (!example || !word) return example || ""
+  // Escape special regex characters in the word
+  const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+  const regex = new RegExp(escaped, "gi")
+  return example.replace(regex, "_____")
+}
+
 // ─── Guess Mode ────────────────────────────────────────────────────────────────
 
 function GuessMode({
@@ -533,11 +543,13 @@ function GuessMode({
   const { transparent } = useTheme()
   const [fillChars, setFillChars] = useState("")
   const [result, setResult] = useState<"idle" | "correct" | "wrong">("idle")
+  const [showHint, setShowHint] = useState(false)
 
   // Reset when word changes
   useEffect(() => {
     setFillChars("")
     setResult("idle")
+    setShowHint(false)
   }, [word])
 
   // Positions that the user needs to fill (non-first-letter, non-space)
@@ -578,6 +590,10 @@ function GuessMode({
   useKeyboard((key) => {
     if (key.ctrl && key.name === "g") {
       onExit()
+      return
+    }
+    if (key.ctrl && key.name === "h") {
+      setShowHint((h) => !h)
       return
     }
     if (key.name === "escape") {
@@ -703,20 +719,31 @@ function GuessMode({
             </box>
           )}
 
+          {result === "idle" && showHint && word.example && (
+            <box style={{ flexDirection: "column", alignItems: "center", marginBottom: 1, marginTop: 1 }}>
+              <text fg="#8a8585" attributes={TextAttributes.BOLD}>Example (hint)</text>
+              <text fg="#c0caf5">{maskWordInExample(word.example, word.word)}</text>
+            </box>
+          )}
+
           {result === "idle" && (
             <box style={{
-              flexDirection: "row",
+              flexDirection: "column",
               alignItems: "center",
-              justifyContent: "center",
-              gap: 1,
+              gap: 0,
               marginTop: 1,
               marginBottom: 1,
             }}>
-              <text fg={fillChars.length > 0 ? "#7aa2f7" : "#656363"}>›</text>
-              <text fg="#4a4545">
-                {fillChars.length > 0
-                   ? `${fillChars.length}/${neededFillCount}`
-                  : "type to fill in the blanks"}
+              <box style={{ flexDirection: "row", alignItems: "center", gap: 1 }}>
+                <text fg={fillChars.length > 0 ? "#7aa2f7" : "#656363"}>›</text>
+                <text fg="#4a4545">
+                  {fillChars.length > 0
+                     ? `${fillChars.length}/${neededFillCount}`
+                    : "type to fill in the blanks"}
+                </text>
+              </box>
+              <text fg={showHint ? "#e0af68" : "#4a4545"} attributes={showHint ? TextAttributes.BOLD : TextAttributes.NONE}>
+                {showHint ? "● hint on" : "[ctrl+h] hint"}
               </text>
             </box>
           )}
