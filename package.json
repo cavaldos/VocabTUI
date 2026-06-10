@@ -8,7 +8,7 @@
     "down": "node fetch.js"
   },
   "devDependencies": {
-    "@types/bun": "latest",
+    "@types/bun": "^1.3.14",
     "@types/node": "^25.9.2",
     "@types/react": "^19.2.16"
   },

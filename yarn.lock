@@ -15,6 +15,41 @@
   resolved "https://registry.npmjs.org/@opentui/core-darwin-arm64/-/core-darwin-arm64-0.3.2.tgz"
   integrity sha512-rFnGfqqEOGiUTbxglpiDA500KeRqcI1ukemhNfDrEzx3imAArS8mFZSuUG7ib31P5EpX+PXuvg0G9/3YXfgWeQ==
 
+"@opentui/core-darwin-x64@0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@opentui/core-darwin-x64/-/core-darwin-x64-0.3.2.tgz#ab5ca32bd7082df309f265261fa72e201eb51c92"
+  integrity sha512-Z+/GxKvB3NzMDSwuyWR7HDStbaNRf5a09lt5W9b4BGmCAFW/mbX0Tuh3kloubcMgiq5vLnVaNzY19hrIgJrjGQ==
+
+"@opentui/core-linux-arm64-musl@0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@opentui/core-linux-arm64-musl/-/core-linux-arm64-musl-0.3.2.tgz#d721f1e3973d75d4d238ef0d19b7a705d86d3219"
+  integrity sha512-noDKfwYUjutQUx5rtoyKrBIYaeSCmAmtxOSJdnKecyWEhMygtdHp4ssPtxzsZMuQAliHogCmD7vUG/pGMgcXMQ==
+
+"@opentui/core-linux-arm64@0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@opentui/core-linux-arm64/-/core-linux-arm64-0.3.2.tgz#f59619521358439c25cc12ee5553dd37515c6928"
+  integrity sha512-0TRuGNR+2GGk0rQuDaIxkIa/3Ty/XySfeOQLAUX4Jqaifky04As69fYT17yOhHqg5viCJUAGG/SdW8IH6C2osg==
+
+"@opentui/core-linux-x64-musl@0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@opentui/core-linux-x64-musl/-/core-linux-x64-musl-0.3.2.tgz#bf0a2a0227454f5e4c99c8c0628a177b9b079bc1"
+  integrity sha512-/FNGeJYhCHcIE3qBIo+nl8014NZ8u/XXUwQY2RjuWhMnzK9kQUfZ3cW4FP6FkOA/k4jGvByya47193II6djFtw==
+
+"@opentui/core-linux-x64@0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@opentui/core-linux-x64/-/core-linux-x64-0.3.2.tgz#afc1870a81d8125c05af3df40ba9c5e6f5aa6beb"
+  integrity sha512-EZp+Lg9eZwzwNny4l2ACHdC95JbEKYbor1WImnm6IEo1e2Fgl9mltYv2J+i+Ea+dXQbrkK/MRIw7CRusxfqFFA==
+
+"@opentui/core-win32-arm64@0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@opentui/core-win32-arm64/-/core-win32-arm64-0.3.2.tgz#327ae659c62d5f5259bc14bec97fa79031a80b55"
+  integrity sha512-/zb5nCZKDgBS1UEQXrzTYUbbTPFMygbiZ/BfNWjEDIbm63gVzQ7pVouYbGP+88CRXIJtwT6LeoVPgp9nmOrDWQ==
+
+"@opentui/core-win32-x64@0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@opentui/core-win32-x64/-/core-win32-x64-0.3.2.tgz#6bdb8b4f3387d5b7d84f5b364cd30e760e49dd65"
+  integrity sha512-q8xqMhW1jlJVzos+A5+FXRquH01j1ZHmrNi/9++W1Ebz3LQYn+8Z8j7rcV/meIiDuo9nyRHigQQT+cy9xV4N2g==
+
 "@opentui/core@0.3.2":
   version "0.3.2"
   resolved "https://registry.npmjs.org/@opentui/core/-/core-0.3.2.tgz"
@@ -44,9 +79,9 @@
     "@opentui/core" "0.3.2"
     react-reconciler "^0.33.0"
 
-"@types/bun@latest":
+"@types/bun@^1.3.14":
   version "1.3.14"
-  resolved "https://registry.npmjs.org/@types/bun/-/bun-1.3.14.tgz"
+  resolved "https://registry.yarnpkg.com/@types/bun/-/bun-1.3.14.tgz#bd8b440919a2587adde311a617a9204f34b8a8c2"
   integrity sha512-h1hFqFVcvAvD9j9K7ZW7vd82aSA+rTdznZa+5bwvCwqSB1jmmfLcbIWhOLx1/+boy/xmjgCs/OMUL8hRJSmnPw==
   dependencies:
     bun-types "1.3.14"
@@ -58,7 +93,7 @@
   dependencies:
     undici-types ">=7.24.0 <7.24.7"
 
-"@types/react@^19.2.16", "@types/react@>=19.2.0":
+"@types/react@^19.2.16":
   version "19.2.17"
   resolved "https://registry.npmjs.org/@types/react/-/react-19.2.17.tgz"
   integrity sha512-MXfmqaVPEVgkBT/aY0aGCkRWWtByiYQXo3xdQ8r5RzuFrPiRn8Gar2tQdXSUQ2GKV3bkXckek89V8wQBY2Q/Aw==
@@ -241,14 +276,6 @@ patch-console@^2.0.0:
   resolved "https://registry.npmjs.org/patch-console/-/patch-console-2.0.0.tgz"
   integrity sha512-0YNdUceMdaQwoKce1gatDScmMo5pu/tfABfnzEqeG0gtTmd7mh/WcwgUjtAeOU7N8nFFlbQBnFK2gXW5fGvmMA==
 
-react-devtools-core@^7.0.1, react-devtools-core@>=6.1.2:
-  version "7.0.1"
-  resolved "https://registry.npmjs.org/react-devtools-core/-/react-devtools-core-7.0.1.tgz"
-  integrity sha512-C3yNvRHaizlpiASzy7b9vbnBGLrhvdhl1CbdU6EnZgxPNbai60szdLtl+VL76UNOt5bOoVTOz5rNWZxgGt+Gsw==
-  dependencies:
-    shell-quote "^1.6.1"
-    ws "^7"
-
 react-reconciler@^0.33.0:
   version "0.33.0"
   resolved "https://registry.npmjs.org/react-reconciler/-/react-reconciler-0.33.0.tgz"
@@ -256,7 +283,7 @@ react-reconciler@^0.33.0:
   dependencies:
     scheduler "^0.27.0"
 
-react@^19.2.0, react@^19.2.7, react@>=19.2.0:
+react@^19.2.7:
   version "19.2.7"
   resolved "https://registry.npmjs.org/react/-/react-19.2.7.tgz"
   integrity sha512-HNe9WslTbXmFK8o8cmwgAeJFSBvt1bPdHCVKtaaV+WlAN36mpT4hcRpwbf3fY56ar2oIXzsBpOAiIRHAdY0OlQ==
@@ -273,11 +300,6 @@ scheduler@^0.27.0:
   version "0.27.0"
   resolved "https://registry.npmjs.org/scheduler/-/scheduler-0.27.0.tgz"
   integrity sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q==
-
-shell-quote@^1.6.1:
-  version "1.8.4"
-  resolved "https://registry.npmjs.org/shell-quote/-/shell-quote-1.8.4.tgz"
-  integrity sha512-VsC6n6vz1ihYYyZZwX7YZSF5l5x36ca17OC+a69h94YqB7X6XLwf+5MOgynYir2SLFUbl8gIYvBo8K8RoNQ6bQ==
 
 signal-exit@^3.0.2, signal-exit@^3.0.7:
   version "3.0.7"
@@ -299,14 +321,6 @@ stack-utils@^2.0.6:
   dependencies:
     escape-string-regexp "^2.0.0"
 
-string-width@^8.1.0, string-width@^8.2.0:
-  version "8.2.1"
-  resolved "https://registry.npmjs.org/string-width/-/string-width-8.2.1.tgz"
-  integrity sha512-IIaP0g3iy9Cyy18w3M9YcaDudujEAVHKt3a3QJg1+sr/oX96TbaGUubG0hJyCjCBThFH+tFpcIyoUHUn1ogaLA==
-  dependencies:
-    get-east-asian-width "^1.5.0"
-    strip-ansi "^7.1.2"
-
 string-width@7.2.0:
   version "7.2.0"
   resolved "https://registry.npmjs.org/string-width/-/string-width-7.2.0.tgz"
@@ -316,19 +330,13 @@ string-width@7.2.0:
     get-east-asian-width "^1.0.0"
     strip-ansi "^7.1.0"
 
-strip-ansi@^7.1.0:
-  version "7.2.0"
-  resolved "https://registry.npmjs.org/strip-ansi/-/strip-ansi-7.2.0.tgz"
-  integrity sha512-yDPMNjp4WyfYBkHnjIRLfca1i6KMyGCtsVgoKe/z1+6vukgaENdgGBZt+ZmKPc4gavvEZ5OgHfHdrazhgNyG7w==
+string-width@^8.1.0, string-width@^8.2.0:
+  version "8.2.1"
+  resolved "https://registry.npmjs.org/string-width/-/string-width-8.2.1.tgz"
+  integrity sha512-IIaP0g3iy9Cyy18w3M9YcaDudujEAVHKt3a3QJg1+sr/oX96TbaGUubG0hJyCjCBThFH+tFpcIyoUHUn1ogaLA==
   dependencies:
-    ansi-regex "^6.2.2"
-
-strip-ansi@^7.1.2:
-  version "7.2.0"
-  resolved "https://registry.npmjs.org/strip-ansi/-/strip-ansi-7.2.0.tgz"
-  integrity sha512-yDPMNjp4WyfYBkHnjIRLfca1i6KMyGCtsVgoKe/z1+6vukgaENdgGBZt+ZmKPc4gavvEZ5OgHfHdrazhgNyG7w==
-  dependencies:
-    ansi-regex "^6.2.2"
+    get-east-asian-width "^1.5.0"
+    strip-ansi "^7.1.2"
 
 strip-ansi@7.1.2:
   version "7.1.2"
@@ -336,6 +344,13 @@ strip-ansi@7.1.2:
   integrity sha512-gmBGslpoQJtgnMAvOVqGZpEz9dyoKTCzy2nfz/n8aIFhN/jCE/rCmcxabB6jOOHV+0WNnylOxaxBQPSvcWklhA==
   dependencies:
     ansi-regex "^6.0.1"
+
+strip-ansi@^7.1.0, strip-ansi@^7.1.2:
+  version "7.2.0"
+  resolved "https://registry.npmjs.org/strip-ansi/-/strip-ansi-7.2.0.tgz"
+  integrity sha512-yDPMNjp4WyfYBkHnjIRLfca1i6KMyGCtsVgoKe/z1+6vukgaENdgGBZt+ZmKPc4gavvEZ5OgHfHdrazhgNyG7w==
+  dependencies:
+    ansi-regex "^6.2.2"
 
 tagged-tag@^1.0.0:
   version "1.0.0"
@@ -354,20 +369,10 @@ type-fest@^5.5.0:
   dependencies:
     tagged-tag "^1.0.0"
 
-typescript@^5:
-  version "5.9.3"
-  resolved "https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz"
-  integrity sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==
-
 "undici-types@>=7.24.0 <7.24.7":
   version "7.24.6"
   resolved "https://registry.npmjs.org/undici-types/-/undici-types-7.24.6.tgz"
   integrity sha512-WRNW+sJgj5OBN4/0JpHFqtqzhpbnV0GuB+OozA9gCL7a993SmU+1JBZCzLNxYsbMfIeDL+lTsphD5jN5N+n0zg==
-
-web-tree-sitter@0.25.10:
-  version "0.25.10"
-  resolved "https://registry.npmjs.org/web-tree-sitter/-/web-tree-sitter-0.25.10.tgz"
-  integrity sha512-Y09sF44/13XvgVKgO2cNDw5rGk6s26MgoZPXLESvMXeefBf7i6/73eFurre0IsTW6E14Y0ArIzhUMmjoc7xyzA==
 
 widest-line@^6.0.0:
   version "6.0.0"
@@ -385,17 +390,12 @@ wrap-ansi@^10.0.0:
     string-width "^8.2.0"
     strip-ansi "^7.1.2"
 
-ws@^7:
-  version "7.5.11"
-  resolved "https://registry.npmjs.org/ws/-/ws-7.5.11.tgz"
-  integrity sha512-zS54Oen9bITtp7kp2XM3AydrCIq1D+HwJOuH+c+e4LfpL/lotP5osijd+UoMnxwAam1GN8R4KtLAyIrIcBNpiA==
-
-ws@^8.18.0, ws@^8.20.0:
+ws@^8.20.0:
   version "8.21.0"
   resolved "https://registry.npmjs.org/ws/-/ws-8.21.0.tgz"
   integrity sha512-Vsp28b7DRcimFQvrqu2Wek3z1iYxDCWqHYB8Qsnk/S4RfaCQzPGPyBNuVjJV3cd6UiKtUtp6sNM77gWvzcCH+g==
 
-yoga-layout@~3.2.1, yoga-layout@3.2.1:
+yoga-layout@3.2.1, yoga-layout@~3.2.1:
   version "3.2.1"
   resolved "https://registry.npmjs.org/yoga-layout/-/yoga-layout-3.2.1.tgz"
   integrity sha512-0LPOt3AxKqMdFBZA3HBAt/t/8vIKq7VaQYbuA8WxCgung+p9TVyKRYdpvCb80HcdTN2NkbIKbhNwKUfm3tQywQ==
